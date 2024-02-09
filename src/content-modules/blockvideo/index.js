@@ -8,9 +8,11 @@ export default function BlockVideo({ video, videoPosterImage }) {
         playsInline
         track={video.description}
         poster={videoPosterImage.file.url}
-        controls
+        // controls
+        autoPlay
+        loop
         alt={video.description}
-        className='aspect-video max-w-full h-auto w-full'
+        className='aspect-video max-w-full h-lvh w-full'
       >
         <source src={video.file.url} type='video/mp4' />
         <track kind='captions' />

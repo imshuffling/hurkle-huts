@@ -11,8 +11,8 @@ export default function BlockTwoColumn({
     <div
       className={
         showTextBeforeImageFirstOnDesktop
-          ? 'section two-col flex flex-row-reverse gap-6 items-center'
-          : 'section two-col flex flex-row gap-6 items-center'
+          ? 'section two-col flex flex-row-reverse items-center'
+          : 'section two-col flex flex-row items-center'
       }
     >
       <div className='basis-1/2 w-full'>
@@ -20,11 +20,11 @@ export default function BlockTwoColumn({
           image={image.gatsbyImageData}
           alt={image.file.fileName}
           lazy='lazy'
-          className='max-w-full h-auto w-full'
+          className='max-w-full h-lvh w-full'
         />
       </div>
 
-      <div className='basis-1/2 text-md'>{renderRichText(text)}</div>
+      <div className='basis-1/2 text-md p-10'>{renderRichText(text)}</div>
     </div>
   );
 }

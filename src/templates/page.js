@@ -102,6 +102,30 @@ export const pageQuery = graphql`
             raw
           }
         }
+        ... on ContentfulContactBlock {
+          __typename
+          title
+          text {
+            raw
+          }
+        }
+        ... on ContentfulCarousel {
+          __typename
+          carouselItem {
+            __typename
+            title
+            image {
+              file {
+                fileName
+              }
+              gatsbyImageData(
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP, AVIF]
+                placeholder: BLURRED
+              )
+            }
+          }
+        }
       }
     }
   }

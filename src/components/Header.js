@@ -28,7 +28,7 @@ export default function Header() {
       // Insert logo at the middle index
       return (
         <React.Fragment key='logo'>
-          <li>
+          <li className='m-auto'>
             <Link to={`/`} activeClassName='active'>
               <img className='w-36 h-auto' src={logo} alt='logo' />{' '}
             </Link>
@@ -53,8 +53,8 @@ export default function Header() {
 
   return (
     <header className='text-center font-sans uppercase px-2 bg-white sticky top-0 w-full shadow-md z-10'>
-      <nav>
-        <ul className='flex gap-4 items-center justify-evenly'>
+      <nav className='max-w-[1020px] w-full m-auto'>
+        <ul className='grid grid-cols-5 items-center'>
           {/* Render combined items */}
           {combinedItems}
         </ul>
