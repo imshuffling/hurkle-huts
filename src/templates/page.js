@@ -52,6 +52,9 @@ export const pageQuery = graphql`
         ... on ContentfulVideoBlock {
           __typename
           title
+          text {
+            raw
+          }
           video {
             file {
               url
@@ -117,6 +120,7 @@ export const pageQuery = graphql`
             image {
               file {
                 fileName
+                url
               }
               gatsbyImageData(
                 layout: CONSTRAINED

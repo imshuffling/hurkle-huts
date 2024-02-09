@@ -20,7 +20,7 @@ export default function BlockTwoColumn({
           image={image.gatsbyImageData}
           alt={image.file.fileName}
           lazy='lazy'
-          className='max-w-full h-lvh w-full'
+          className='max-w-full h-dvh w-full'
         />
       </div>
 

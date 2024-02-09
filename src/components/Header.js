@@ -28,13 +28,17 @@ export default function Header() {
       // Insert logo at the middle index
       return (
         <React.Fragment key='logo'>
-          <li className='m-auto'>
+          <li className='mx-auto'>
             <Link to={`/`} activeClassName='active'>
-              <img className='w-36 h-auto' src={logo} alt='logo' />{' '}
+              <img className='w-32 h-auto' src={logo} alt='logo' />{' '}
             </Link>
           </li>
-          <li key={page.slug}>
-            <Link to={`/${page.slug}`} activeClassName='active'>
+          <li className='mx-auto' key={page.slug}>
+            <Link
+              to={`/${page.slug}`}
+              activeClassName='active'
+              className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
+            >
               {page.pageTitle}
             </Link>
           </li>
@@ -42,8 +46,12 @@ export default function Header() {
       );
     } else {
       return (
-        <li key={page.slug}>
-          <Link to={`/${page.slug}`} activeClassName='active'>
+        <li className='mx-auto' key={page.slug}>
+          <Link
+            to={`/${page.slug}`}
+            activeClassName='active'
+            className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
+          >
             {page.pageTitle}
           </Link>
         </li>
@@ -53,7 +61,7 @@ export default function Header() {
 
   return (
     <header className='text-center font-sans uppercase px-2 bg-white sticky top-0 w-full shadow-md z-10'>
-      <nav className='max-w-[1020px] w-full m-auto'>
+      <nav className='max-w-[945px] w-full m-auto'>
         <ul className='grid grid-cols-5 items-center'>
           {/* Render combined items */}
           {combinedItems}
