@@ -15,10 +15,10 @@ module.exports = {
         useNameForId: false,
       },
     },
+    'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-postcss',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
