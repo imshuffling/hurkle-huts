@@ -10,7 +10,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <h1 className='text-2xl text-center font-heading p-12'>{pageTitle}</h1>
+      <h1 className='text-4xl text-center font-heading p-12'>{pageTitle}</h1>
       {blocks && <ContentModules blocks={blocks} />}
     </Layout>
   );

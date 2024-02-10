@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import logo from '../images/logo.svg';
+// import logo from '../images/logo.svg';
+import LogoIcon from '../images/LogoIcon';
+import tw from 'twin.macro';
 
-export default function Header() {
+export default function Header({ pathname }) {
+  console.log('pathname', pathname);
+
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       contentfulNavigation(title: { eq: "Main navigation" }) {
@@ -20,6 +24,8 @@ export default function Header() {
     (page) => page.slug !== 'homepage'
   );
 
+  const isHomePage = pathname === '/';
+
   const middleIndex = Math.ceil(filteredPages.length / 2);
 
   // Map the filtered pages to list items
@@ -30,7 +36,7 @@ export default function Header() {
         <React.Fragment key='logo'>
           <li className='mx-auto'>
             <Link to={`/`} activeClassName='active'>
-              <img className='w-32 h-auto' src={logo} alt='logo' />{' '}
+              <LogoIcon />
             </Link>
           </li>
           <li className='mx-auto' key={page.slug}>
@@ -60,7 +66,13 @@ export default function Header() {
   });
 
   return (
-    <header className='text-center font-sans uppercase px-2 bg-white sticky top-0 w-full shadow-md z-10'>
+    <header
+      css={[
+        tw`relative text-center bg-white font-sans uppercase px-2 w-full z-10`,
+        isHomePage &&
+          tw`absolute top-0 left-0 z-10 w-full bg-transparent text-white`,
+      ]}
+    >
       <nav className='max-w-[945px] w-full m-auto'>
         <ul className='grid grid-cols-5 items-center'>
           {/* Render combined items */}

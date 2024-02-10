@@ -9,7 +9,7 @@ export default function BlockVideo({ video, videoPosterImage, title, text }) {
         {text && renderRichText(text)}
       </div>
 
-      <div className='absolute z-8 top-0 right-0 bg-gradient-to-t from-[#231f20] h-dvh w-full' />
+      <div className='absolute z-8 top-0 right-0 bg-gradient-to-b from-[#231f20] h-dvh w-full' />
 
       <video
         muted
