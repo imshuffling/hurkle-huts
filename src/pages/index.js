@@ -4,8 +4,6 @@ import Layout from '../components/Layout';
 import ContentModules from '../content-modules';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
-
   const { blocks } = data.contentfulPage;
 
   return <Layout>{blocks && <ContentModules blocks={blocks} />}</Layout>;

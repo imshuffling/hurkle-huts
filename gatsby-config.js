@@ -21,6 +21,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-emotion',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

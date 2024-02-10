@@ -30,7 +30,7 @@ export default function BlockContact({ title, text }) {
   };
 
   return (
-    <div className='section contact text-center p-24'>
+    <div className='section contact text-center p-4 md:p-24'>
       <h3 className='text-xl font-heading mb-2'>{title}</h3>
       {renderRichText(text)}
       <form
@@ -40,7 +40,7 @@ export default function BlockContact({ title, text }) {
         data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
-        className='space-y-8 max-w-lg m-auto p-14'
+        className='space-y-8 max-w-lg m-auto p-4 md:p-14'
       >
         <p hidden>
           <label>

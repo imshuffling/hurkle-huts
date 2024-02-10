@@ -10,9 +10,13 @@ export default function BlockCarousel({ carouselItem }) {
 
   const thumbs = carouselItem.map((item, index) => {
     return (
-      <React.Fragment key={index}>
-        <img className='aspect-square h-auto w-60' src={item.image.file.url} />
-      </React.Fragment>
+      <div key={index} className='cursor-pointer'>
+        <img
+          className='aspect-square h-auto w-20 mx-auto text-center'
+          src={item.image.file.url}
+          alt={item.image?.file?.fileName}
+        />
+      </div>
     );
   });
 
@@ -24,9 +28,8 @@ export default function BlockCarousel({ carouselItem }) {
     customPaging: function (i) {
       return <a>{thumbs[i]}</a>;
     },
-
     dots: true,
-    dotsClass: 'slick-dots slick-thumb flex flex-row gap-2',
+    dotsClass: '!flex flex-row gap-4 !items-center py-4 justify-center',
     speed: 500,
   };
 
@@ -35,12 +38,18 @@ export default function BlockCarousel({ carouselItem }) {
       <Slider {...settings}>
         {carouselItem.map((item, index) => {
           return (
-            <div key={index} className='flex flex-row items-center mx-auto'>
-              <h3 className='text-xl font-heading mb-2'>{item.title}</h3>
+            <div
+              key={index}
+              className='flex flex-row items-center mx-auto relative'
+            >
+              <h3 className='text-xl font-heading mb-2 absolute bottom-0 left-0 z-20 text-white p-6'>
+                {item.title}
+              </h3>
+              <div className='absolute z-8 bottom-0 right-0 bg-gradient-to-t from-[#231f20] h-1/2 w-full z-10' />
               <GatsbyImage
                 image={item.image.gatsbyImageData}
                 alt={item.image?.file?.fileName}
-                className='h-dvh w-full'
+                className='min-h-[40rem] w-full'
               />
             </div>
           );

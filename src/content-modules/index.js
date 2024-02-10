@@ -18,7 +18,7 @@ const MODULE_MAP = {
 
 export default function ContentModules({ blocks }) {
   return (
-    <div className='flex gap-2 flex-col'>
+    <div className='flex flex-col'>
       {blocks.map(({ __typename: type, ...props }, i) => {
         const Component = MODULE_MAP[type];
         return <Component key={i} {...props} />;
