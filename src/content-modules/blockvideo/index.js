@@ -11,7 +11,7 @@ export default function BlockVideo({
   return (
     <div className='section video w-full relative'>
       <div className='absolute text-white drop-shadow-xl text-center z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-        {hideBlockTitle && <h3 className='text-center p-8'>{title}</h3>}
+        {hideBlockTitle && <h3 className='text-center p-2'>{title}</h3>}
         {text && renderRichText(text)}
       </div>
 
@@ -22,11 +22,10 @@ export default function BlockVideo({
         playsInline
         track={video.description}
         poster={videoPosterImage.file.url}
-        // controls
         autoPlay
         loop
         alt={video.description}
-        className='object-cover max-w-full h-dvh w-full'
+        className='object-cover max-w-full h-svh w-full'
       >
         <source src={video.file.url} type='video/mp4' />
         <track kind='captions' />

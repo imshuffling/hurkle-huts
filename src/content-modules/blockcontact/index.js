@@ -30,9 +30,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
   };
 
   return (
-    <div className='section contact text-center p-4'>
+    <div className='section contact p-4'>
       {hideBlockTitle && <h3 className='text-center p-8'>{title}</h3>}
-      {renderRichText(text)}
+      <div className='text-center'>{renderRichText(text)}</div>
       <form
         name='contact'
         method='post'
@@ -40,7 +40,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
-        className='space-y-8 max-w-lg m-auto p-4 md:p-6'
+        className='space-y-8 max-w-lg mx-auto p-4 md:p-6'
       >
         <p hidden>
           <label>
@@ -56,7 +56,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         <div>
           <label
             htmlFor='email'
-            className='block text-sm font-medium leading-6 text-gray-900'
+            className='text-left block text-sm font-medium leading-6 text-black'
           >
             Email
           </label>
@@ -76,7 +76,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         <div>
           <label
             htmlFor='message'
-            className='block text-sm font-medium leading-6 text-gray-900'
+            className='text-left block text-sm font-medium leading-6 text-black'
           >
             Your message
           </label>
@@ -88,16 +88,19 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               placeholder='Your message'
               required
               onChange={handleChange}
+              rows={4}
               className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             />
           </div>
         </div>
-        <button
-          type='submit'
-          className='rounded-md bg-primary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-        >
-          Send
-        </button>
+        <div className='mt-1'>
+          <button
+            type='submit'
+            className='text-left rounded-md bg-primary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+          >
+            Send
+          </button>
+        </div>
       </form>
     </div>
   );

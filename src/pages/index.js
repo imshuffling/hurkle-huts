@@ -82,6 +82,31 @@ export const pageQuery = graphql`
               )
             }
           }
+          ... on ContentfulColumnImageimageBlock {
+            __typename
+            title
+            hideBlockTitle
+            leftImage {
+              file {
+                fileName
+              }
+              gatsbyImageData(
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP, AVIF]
+                placeholder: BLURRED
+              )
+            }
+            rightImage {
+              file {
+                fileName
+              }
+              gatsbyImageData(
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP, AVIF]
+                placeholder: BLURRED
+              )
+            }
+          }
           ... on ContentfulTwoColumnTextPhotoBlock {
             __typename
             title

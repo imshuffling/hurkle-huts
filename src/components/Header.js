@@ -93,19 +93,21 @@ export default function Header({ pathname }) {
           <div class='fixed top-0 right-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0'>
             <div class='float-right min-h-full w-[85%] bg-white px-6 pt-12 shadow-2xl'>
               <menu>
-                {filteredPages.map((page, index) => {
-                  return (
-                    <li className='flex' key={index}>
-                      <Link
-                        to={`/${page.slug}`}
-                        activeClassName='active'
-                        className='text-black justify-start'
-                      >
-                        {page.pageTitle}
-                      </Link>
-                    </li>
-                  );
-                })}
+                <ul className='flex flex-col gap-3'>
+                  {filteredPages.map((page, index) => {
+                    return (
+                      <li className='flex menu-item' key={index}>
+                        <Link
+                          to={`/${page.slug}`}
+                          activeClassName='active'
+                          className='text-black justify-start'
+                        >
+                          {page.pageTitle}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               </menu>
             </div>
           </div>

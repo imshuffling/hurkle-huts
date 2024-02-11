@@ -6,12 +6,14 @@ import BlockTwoColumn from './blocktwocolumn';
 import BlockVideo from './blockvideo';
 import BlockContact from './blockcontact';
 import BlockCarousel from './blockcarousel';
+import BlockTwoColumnImage from './blocktwocolumnImage';
 
 const MODULE_MAP = {
   ContentfulFullWidthTextBlock: BlockTextArea,
   ContentfulPhotoBlock: BlockImage,
   ContentfulVideoBlock: BlockVideo,
   ContentfulTwoColumnTextPhotoBlock: BlockTwoColumn,
+  ContentfulColumnImageimageBlock: BlockTwoColumnImage,
   ContentfulContactBlock: BlockContact,
   ContentfulCarousel: BlockCarousel,
 };

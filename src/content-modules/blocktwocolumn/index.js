@@ -2,11 +2,6 @@ import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
-// w-full h-full flex flex-col items-center md:flex-row relative md:min-h-[40rem] mx-auto
-
-// image
-// relative w-full min-h-full
-
 export default function BlockTwoColumn({
   title,
   image,
@@ -16,7 +11,9 @@ export default function BlockTwoColumn({
 }) {
   return (
     <div className='section two-col'>
-      {hideBlockTitle && <h3 className='text-center p-8'>{title}</h3>}
+      {hideBlockTitle && (
+        <h3 className='md:text-center px-4 md:px-8 mt-8 mb-8'>{title}</h3>
+      )}
       <div
         className={
           showTextBeforeImageFirstOnDesktop
