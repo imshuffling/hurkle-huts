@@ -52,6 +52,7 @@ export const pageQuery = graphql`
           ... on ContentfulVideoBlock {
             __typename
             title
+            hideBlockTitle
             text {
               raw
             }
@@ -69,6 +70,7 @@ export const pageQuery = graphql`
           ... on ContentfulPhotoBlock {
             __typename
             title
+            hideBlockTitle
             image {
               file {
                 fileName
@@ -83,6 +85,7 @@ export const pageQuery = graphql`
           ... on ContentfulTwoColumnTextPhotoBlock {
             __typename
             title
+            hideBlockTitle
             text {
               raw
             }
@@ -101,6 +104,7 @@ export const pageQuery = graphql`
           ... on ContentfulFullWidthTextBlock {
             __typename
             title
+            hideBlockTitle
             text {
               raw
             }
@@ -108,6 +112,7 @@ export const pageQuery = graphql`
           ... on ContentfulContactBlock {
             __typename
             title
+            hideBlockTitle
             text {
               raw
             }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { navigate } from 'gatsby-link';
 
-export default function BlockContact({ title, text }) {
+export default function BlockContact({ title, text, hideBlockTitle }) {
   const [message, setMessage] = useState({});
 
   function encode(data) {
@@ -30,8 +30,8 @@ export default function BlockContact({ title, text }) {
   };
 
   return (
-    <div className='section contact text-center p-4 md:p-24'>
-      <h3 className='text-xl font-heading mb-2'>{title}</h3>
+    <div className='section contact text-center p-4'>
+      {hideBlockTitle && <h3 className='text-center p-8'>{title}</h3>}
       {renderRichText(text)}
       <form
         name='contact'
@@ -40,7 +40,7 @@ export default function BlockContact({ title, text }) {
         data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
-        className='space-y-8 max-w-lg m-auto p-4 md:p-14'
+        className='space-y-8 max-w-lg m-auto p-4 md:p-6'
       >
         <p hidden>
           <label>
@@ -53,24 +53,51 @@ export default function BlockContact({ title, text }) {
             />
           </label>
         </p>
-        <input
-          type='email'
-          aria-label='Enter your email'
-          name='email'
-          placeholder='Your email'
-          required
-          onChange={handleChange}
-          className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
-        />
-        <textarea
-          name='message'
-          aria-label='Enter your message'
-          placeholder='Your message'
-          required
-          onChange={handleChange}
-          className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
-        />
-        <button type='submit'>Send</button>
+        <div>
+          <label
+            htmlFor='email'
+            className='block text-sm font-medium leading-6 text-gray-900'
+          >
+            Email
+          </label>
+          <div className='mt-1'>
+            <input
+              type='email'
+              name='email'
+              id='email'
+              required
+              onChange={handleChange}
+              className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+              placeholder='you@example.com'
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            htmlFor='message'
+            className='block text-sm font-medium leading-6 text-gray-900'
+          >
+            Your message
+          </label>
+          <div className='mt-1'>
+            <textarea
+              name='message'
+              id='message'
+              aria-label='Enter your message'
+              placeholder='Your message'
+              required
+              onChange={handleChange}
+              className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+            />
+          </div>
+        </div>
+        <button
+          type='submit'
+          className='rounded-md bg-primary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+        >
+          Send
+        </button>
       </form>
     </div>
   );

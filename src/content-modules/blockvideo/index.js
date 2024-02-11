@@ -1,11 +1,17 @@
 import React from 'react';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
-export default function BlockVideo({ video, videoPosterImage, title, text }) {
+export default function BlockVideo({
+  video,
+  videoPosterImage,
+  title,
+  text,
+  hideBlockTitle,
+}) {
   return (
     <div className='section video w-full relative'>
       <div className='absolute text-white drop-shadow-xl text-center z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-        <h3>{title}</h3>
+        {hideBlockTitle && <h3 className='text-center p-8'>{title}</h3>}
         {text && renderRichText(text)}
       </div>
 

@@ -39,11 +39,11 @@ export default function Header({ pathname }) {
               <LogoIcon />
             </Link>
           </li>
-          <li className='mx-auto' key={page.slug}>
+          <li className='mx-auto menu-item' key={page.slug}>
             <Link
               to={`/${page.slug}`}
               activeClassName='active'
-              className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-primary-green after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
+              className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-primary-green after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center .active:bg-primary-green'
             >
               {page.pageTitle}
             </Link>
@@ -52,7 +52,7 @@ export default function Header({ pathname }) {
       );
     } else {
       return (
-        <li className='mx-auto' key={page.slug}>
+        <li className='mx-auto menu-item' key={page.slug}>
           <Link
             to={`/${page.slug}`}
             activeClassName='active'

@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-active {
+  button img {
+    outline: 3px solid #99ad98;
+  }
+}
+
+.menu-item .active {
+  &:after {
+    content: '' !important;
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: #99ad98 !important;
+    --tw-scale-x: 1 !important;
+  }
+}

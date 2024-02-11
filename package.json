@@ -39,6 +39,7 @@
     "typeface-poppins": "^1.1.13"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "autoprefixer": "^10.4.17",
     "babel-preset-gatsby": "^3.13.1",
     "gatsby-plugin-postcss": "^6.13.1",

@@ -10,7 +10,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <h1 className='text-2xl leading-8 p-4 md:text-4xl text-center font-heading md:p-12'>
+      <h1 className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'>
         {pageTitle}
       </h1>
       {blocks && <ContentModules blocks={blocks} />}
@@ -54,6 +54,7 @@ export const pageQuery = graphql`
         ... on ContentfulVideoBlock {
           __typename
           title
+          hideBlockTitle
           text {
             raw
           }
@@ -71,6 +72,7 @@ export const pageQuery = graphql`
         ... on ContentfulTwoColumnTextPhotoBlock {
           __typename
           title
+          hideBlockTitle
           showTextBeforeImageFirstOnDesktop
           text {
             raw
@@ -89,6 +91,7 @@ export const pageQuery = graphql`
         ... on ContentfulPhotoBlock {
           __typename
           title
+          hideBlockTitle
           image {
             file {
               fileName
@@ -103,6 +106,7 @@ export const pageQuery = graphql`
         ... on ContentfulFullWidthTextBlock {
           __typename
           title
+          hideBlockTitle
           text {
             raw
           }
@@ -110,6 +114,7 @@ export const pageQuery = graphql`
         ... on ContentfulContactBlock {
           __typename
           title
+          hideBlockTitle
           text {
             raw
           }

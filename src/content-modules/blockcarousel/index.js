@@ -26,7 +26,7 @@ export default function BlockCarousel({ carouselItem }) {
     slidesToScroll: 1,
     adaptiveHeight: true,
     customPaging: function (i) {
-      return <a>{thumbs[i]}</a>;
+      return <button>{thumbs[i]}</button>;
     },
     dots: true,
     dotsClass: '!flex flex-row gap-4 !items-center py-4',
