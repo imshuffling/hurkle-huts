@@ -8,7 +8,7 @@ const LogoIcon = (props) => (
     data-name='Layer 1'
     viewBox='0 0 523 678'
     {...props}
-    css={[tw`w-auto h-40 fill-current`]}
+    css={[tw`w-auto h-20 md:h-40 fill-current`]}
   >
     <defs>
       <style>

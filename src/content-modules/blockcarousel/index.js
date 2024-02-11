@@ -29,7 +29,7 @@ export default function BlockCarousel({ carouselItem }) {
       return <a>{thumbs[i]}</a>;
     },
     dots: true,
-    dotsClass: '!flex flex-row gap-4 !items-center py-4 justify-center',
+    dotsClass: '!flex flex-row gap-4 !items-center py-4',
     speed: 500,
   };
 

@@ -43,7 +43,7 @@ export default function Header({ pathname }) {
             <Link
               to={`/${page.slug}`}
               activeClassName='active'
-              className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
+              className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-primary-green after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
             >
               {page.pageTitle}
             </Link>
@@ -56,7 +56,7 @@ export default function Header({ pathname }) {
           <Link
             to={`/${page.slug}`}
             activeClassName='active'
-            className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
+            className='relative w-fit block after:block after:content after:absolute after:h-[3px] after:bg-primary-green after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
           >
             {page.pageTitle}
           </Link>
@@ -80,10 +80,13 @@ export default function Header({ pathname }) {
         </ul>
       </nav>
 
-      <nav className='block md:hidden'>
+      <nav className='md:hidden flex flex-row justify-between items-center'>
+        <Link to={`/`} activeClassName='active'>
+          <LogoIcon />
+        </Link>
         <label class='relative z-40 cursor-pointer px-3 py-6' for='mobile-menu'>
           <input class='peer hidden' type='checkbox' id='mobile-menu' />
-          <div class="relative z-50 block h-[1px] w-7 bg-black bg-transparent content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.35rem] after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
+          <div class="relative z-50 block h-[2px] w-7 bg-black content-[''] before:absolute before:top-[-0.50rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.50rem] after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
           <div class='fixed inset-0 z-40 hidden h-full w-full bg-black/50 backdrop-blur-sm peer-checked:block'>
             &nbsp;
           </div>

@@ -56,6 +56,7 @@ module.exports = {
           lime: '#95C236',
           acid: '#DBDF58',
           bistre: '#999',
+          green: '#99AD98',
         },
         secondary: {
           DEFAULT: '#231f20',
