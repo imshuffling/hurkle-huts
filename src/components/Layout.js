@@ -11,15 +11,15 @@ flex flex-col min-h-screen
 
 const GlobalStyle = createGlobalStyle`
   h1 {
-    ${tw`text-3xl leading-9 md:text-6xl font-heading md:leading-12`}
+    ${tw`text-3xl leading-9 md:text-5xl font-heading md:leading-12`}
   }
 
   h2 {
-    ${tw`text-5xl font-heading leading-11`}
+    ${tw`text-2xl leading-8 md:text-4xl font-heading md:leading-10`}
   }
 
   h3 {
-    ${tw`text-xl leading-8 md:text-4xl font-heading md:leading-10`}
+    ${tw`text-xl leading-8 md:text-3xl font-heading md:leading-9`}
   }
 
   h4 {
