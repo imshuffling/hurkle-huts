@@ -4,15 +4,17 @@ import Layout from '../components/Layout';
 import ContentModules from '../content-modules';
 
 const Page = ({ data }) => {
-  const { pageTitle, blocks } = data.contentfulPage;
+  const { pageTitle, blocks, hidePageTitle } = data.contentfulPage;
 
   console.log(data);
 
   return (
     <Layout>
-      <h1 className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'>
-        {pageTitle}
-      </h1>
+      {!hidePageTitle && (
+        <h1 className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'>
+          {pageTitle}
+        </h1>
+      )}
       {blocks && <ContentModules blocks={blocks} />}
     </Layout>
   );
@@ -41,6 +43,7 @@ export const pageQuery = graphql`
   query pageQuery($slug: String!) {
     contentfulPage(slug: { eq: $slug }) {
       pageTitle
+      hidePageTitle
       seoTitle
       seoFeaturedImage {
         file {

@@ -6,8 +6,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function BlockCarousel({ carouselItem }) {
-  console.log('carouselItem', carouselItem);
-
   const thumbs = carouselItem.map((item, index) => {
     return (
       <div key={index} className='cursor-pointer'>
@@ -34,7 +32,7 @@ export default function BlockCarousel({ carouselItem }) {
   };
 
   return (
-    <div className='section image w-full max-w-[1200px] mx-auto'>
+    <div className='section image w-full max-w-[1200px] mx-auto px-2'>
       <Slider {...settings}>
         {carouselItem.map((item, index) => {
           return (

@@ -11,14 +11,14 @@ export default function BlockTwoColumn({
 }) {
   return (
     <div className='section two-col'>
-      {hideBlockTitle && (
+      {!hideBlockTitle && (
         <h3 className='md:text-center px-4 md:px-8 mt-8 mb-8'>{title}</h3>
       )}
       <div
         className={
           showTextBeforeImageFirstOnDesktop
-            ? 'flex flex-col-reverse md:flex-row-reverse items-center'
-            : 'flex flex-col-reverse md:flex-row items-center'
+            ? 'flex flex-col-reverse md:flex-row-reverse items-center gap-4'
+            : 'flex flex-col-reverse md:flex-row items-center gap-4'
         }
       >
         <div className='md:basis-1/2 w-full'>

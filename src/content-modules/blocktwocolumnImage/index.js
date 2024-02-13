@@ -9,8 +9,8 @@ export default function BlockTwoColumnImage({
 }) {
   return (
     <div className='section two-col'>
-      {hideBlockTitle && <h3 className='text-center px-4 md:px-8'>{title}</h3>}
-      <div className='flex flex-col-reverse md:flex-row items-center'>
+      {!hideBlockTitle && <h3 className='text-center px-4 md:px-8'>{title}</h3>}
+      <div className='flex flex-col-reverse md:flex-row items-center gap-4'>
         <div className='md:basis-1/2 w-full'>
           <GatsbyImage
             image={leftImage.gatsbyImageData}

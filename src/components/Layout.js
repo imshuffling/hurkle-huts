@@ -11,7 +11,7 @@ flex flex-col min-h-screen
 
 const GlobalStyle = createGlobalStyle`
   h1 {
-    ${tw`text-6xl font-heading leading-12`}
+    ${tw`text-3xl leading-9 md:text-6xl font-heading md:leading-12`}
   }
 
   h2 {
