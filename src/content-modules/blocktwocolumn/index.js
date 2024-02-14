@@ -17,8 +17,8 @@ export default function BlockTwoColumn({
       <div
         className={
           showTextBeforeImageFirstOnDesktop
-            ? 'flex flex-col-reverse md:flex-row-reverse items-center gap-4'
-            : 'flex flex-col-reverse md:flex-row items-center gap-4'
+            ? 'flex flex-col-reverse md:flex-row-reverse items-center'
+            : 'flex flex-col-reverse md:flex-row items-center'
         }
       >
         <div className='md:basis-1/2 w-full'>

@@ -38,12 +38,12 @@ export default function BlockCarousel({ carouselItem }) {
           return (
             <div
               key={index}
-              className='flex flex-row items-center mx-auto relative'
+              className='flex flex-row items-center mx-auto relative overflow-hidden'
             >
               <h3 className='text-xl font-heading mb-2 absolute bottom-0 left-0 z-20 text-white p-6'>
                 {item.title}
               </h3>
-              <div className='absolute z-8 bottom-0 right-0 bg-gradient-to-t from-[#231f20] h-1/2 w-full z-10' />
+              {/* <div className='fixed z-8 bottom-0 right-0 bg-gradient-to-t from-[#231f20] h-1/2 w-full z-10' /> */}
               <GatsbyImage
                 image={item.image.gatsbyImageData}
                 alt={item.image?.file?.fileName}
