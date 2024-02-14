@@ -57,6 +57,8 @@ module.exports = {
           acid: '#DBDF58',
           bistre: '#999',
           green: '#99AD98',
+          pink: '#F8F1F4',
+          blue: '#0E2944',
         },
         secondary: {
           DEFAULT: '#231f20',

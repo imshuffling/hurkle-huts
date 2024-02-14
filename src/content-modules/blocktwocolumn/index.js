@@ -14,14 +14,18 @@ export default function BlockTwoColumn({
   const bgWhite = backgroundColour === 'White';
   const bgBlack = backgroundColour === 'Black';
   const bgGreen = backgroundColour === 'Green';
+  const bgPink = backgroundColour === 'Pink';
+  const bgBlue = backgroundColour === 'Blue';
 
   return (
     <div
       className='section two-col'
       css={[
         bgWhite && tw`text-secondary`,
+        bgPink && tw`text-primary-blue bg-primary-pink`,
         bgBlack && tw`text-white bg-secondary`,
         bgGreen && tw`text-white bg-primary-green`,
+        bgBlue && tw`text-primary-pink bg-primary-blue`,
       ]}
     >
       {!hideBlockTitle && (
