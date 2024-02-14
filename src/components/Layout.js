@@ -46,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
     ${tw`mt-3 md:mt-5`}
   }
 
+  p {
+    margin-top: 0;
+  }
+
 `;
 
 // p {

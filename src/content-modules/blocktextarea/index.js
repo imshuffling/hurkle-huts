@@ -25,7 +25,7 @@ export default function BlockTextArea({
         bgBlue && tw`text-primary-pink bg-primary-blue`,
       ]}
     >
-      <div className='text-center py-12 container mx-auto'>
+      <div className='text-center p-4 md:py-12 container mx-auto'>
         {!hideBlockTitle && (
           <h3 className='text-center px-4 md:px-8'>{title}</h3>
         )}

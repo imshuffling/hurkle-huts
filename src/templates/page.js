@@ -76,6 +76,7 @@ export const pageQuery = graphql`
           __typename
           title
           hideBlockTitle
+          backgroundColour
           leftImage {
             file {
               fileName
