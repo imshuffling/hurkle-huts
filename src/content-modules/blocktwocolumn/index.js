@@ -47,7 +47,7 @@ export default function BlockTwoColumn({
           />
         </div>
 
-        <div className='md:basis-1/2 text-sm md:text-md p-4 md:p-20'>
+        <div className='md:basis-1/2 text-sm md:text-md p-8 md:p-20'>
           {renderRichText(text)}
         </div>
       </div>
