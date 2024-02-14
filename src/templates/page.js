@@ -152,6 +152,8 @@ export const pageQuery = graphql`
         }
         ... on ContentfulCarousel {
           __typename
+          carouselTitle
+          backgroundColour
           carouselItem {
             __typename
             title

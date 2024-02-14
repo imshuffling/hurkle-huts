@@ -4,8 +4,9 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import tw from 'twin.macro';
 
-export default function BlockCarousel({ carouselItem }) {
+export default function BlockCarousel({ carouselItem, backgroundColour }) {
   const thumbs = carouselItem.map((item, index) => {
     return (
       <div key={index} className='cursor-pointer'>
@@ -27,32 +28,49 @@ export default function BlockCarousel({ carouselItem }) {
       return <button>{thumbs[i]}</button>;
     },
     dots: true,
-    dotsClass: '!flex flex-row gap-4 !items-center py-4',
+    dotsClass: '!flex flex-row gap-4 !items-center py-4 justify-center',
     speed: 500,
   };
 
+  const bgWhite = backgroundColour === 'White';
+  const bgBlack = backgroundColour === 'Black';
+  const bgGreen = backgroundColour === 'Green';
+  const bgPink = backgroundColour === 'Pink';
+  const bgBlue = backgroundColour === 'Blue';
+
   return (
-    <div className='section image w-full max-w-[1200px] mx-auto px-2'>
-      <Slider {...settings}>
-        {carouselItem.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className='flex flex-row items-center mx-auto relative overflow-hidden'
-            >
-              <h3 className='text-xl font-heading mb-2 absolute bottom-0 left-0 z-20 text-white p-6'>
-                {item.title}
-              </h3>
-              {/* <div className='fixed z-8 bottom-0 right-0 bg-gradient-to-t from-[#231f20] h-1/2 w-full z-10' /> */}
-              <GatsbyImage
-                image={item.image.gatsbyImageData}
-                alt={item.image?.file?.fileName}
-                className='min-h-[40rem] w-full'
-              />
-            </div>
-          );
-        })}
-      </Slider>
+    <div
+      className='section image w-full p-4 md:p-8'
+      css={[
+        bgWhite && tw`text-secondary`,
+        bgPink && tw`text-primary-blue bg-primary-pink`,
+        bgBlack && tw`text-white bg-secondary`,
+        bgGreen && tw`text-white bg-primary-green`,
+        bgBlue && tw`text-primary-pink bg-primary-blue`,
+      ]}
+    >
+      <div className='container mx-auto'>
+        <Slider {...settings}>
+          {carouselItem.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className='flex flex-row items-center mx-auto relative overflow-hidden'
+              >
+                <h3 className='text-xl font-heading mb-2 absolute bottom-0 left-0 z-20 text-white p-6'>
+                  {item.title}
+                </h3>
+                {/* <div className='fixed z-8 bottom-0 right-0 bg-gradient-to-t from-[#231f20] h-1/2 w-full z-10' /> */}
+                <GatsbyImage
+                  image={item.image.gatsbyImageData}
+                  alt={item.image?.file?.fileName}
+                  className='min-h-[40rem] w-full'
+                />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 }
