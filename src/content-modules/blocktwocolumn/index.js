@@ -1,6 +1,7 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
+import tw from 'twin.macro';
 
 export default function BlockTwoColumn({
   title,
@@ -8,9 +9,21 @@ export default function BlockTwoColumn({
   text,
   hideBlockTitle,
   showTextBeforeImageFirstOnDesktop,
+  backgroundColour,
 }) {
+  const bgWhite = backgroundColour === 'White';
+  const bgBlack = backgroundColour === 'Black';
+  const bgGreen = backgroundColour === 'Green';
+
   return (
-    <div className='section two-col'>
+    <div
+      className='section two-col'
+      css={[
+        bgWhite && tw`text-secondary`,
+        bgBlack && tw`text-white bg-secondary`,
+        bgGreen && tw`text-white bg-primary-green`,
+      ]}
+    >
       {!hideBlockTitle && (
         <h3 className='md:text-center px-4 md:px-8 mt-8 mb-8'>{title}</h3>
       )}

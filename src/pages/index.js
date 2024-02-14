@@ -111,6 +111,7 @@ export const pageQuery = graphql`
             __typename
             title
             hideBlockTitle
+            backgroundColour
             text {
               raw
             }
@@ -130,6 +131,7 @@ export const pageQuery = graphql`
             __typename
             title
             hideBlockTitle
+            backgroundColour
             text {
               raw
             }

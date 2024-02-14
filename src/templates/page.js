@@ -102,6 +102,7 @@ export const pageQuery = graphql`
           title
           hideBlockTitle
           showTextBeforeImageFirstOnDesktop
+          backgroundColour
           text {
             raw
           }
@@ -134,6 +135,7 @@ export const pageQuery = graphql`
         ... on ContentfulFullWidthTextBlock {
           __typename
           title
+          backgroundColour
           hideBlockTitle
           text {
             raw
