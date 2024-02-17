@@ -113,13 +113,26 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-export default function Layout({ children }) {
+export default function Layout({ children}) {
   const { pathname } = useLocation();
+  let isFirstBlockPhotoBlock = false;
 
+  // Accessing props from children components
+  React.Children.forEach(children, child => {
+    // Check if child is not null
+    if (child && child.props && child.props.blocks && child.props.blocks.length > 0) {
+      // Check if the first element in the blocks array is ContentfulPhotoBlock
+      isFirstBlockPhotoBlock =
+        child.props.blocks[0].__typename === 'ContentfulPhotoBlock';
+
+      // Exit loop after finding the first block
+      return;
+    }
+  });
   return (
     <PageContainer>
       <GlobalStyle />
-      <Header pathname={pathname} />
+      <Header pathname={pathname} isFirstBlockPhotoBlock={isFirstBlockPhotoBlock} />
       <main className='flex-1'>{children}</main>
       <Footer />
       <CookieConsent

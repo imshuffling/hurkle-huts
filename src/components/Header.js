@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-// import logo from '../images/logo.svg';
 import LogoIcon from '../images/LogoIcon';
 import tw from 'twin.macro';
 
-export default function Header({ pathname }) {
-  console.log('pathname', pathname);
-
+export default function Header({ pathname, isFirstBlockPhotoBlock }) {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       contentfulNavigation(title: { eq: "Main navigation" }) {
@@ -70,6 +67,8 @@ export default function Header({ pathname }) {
       css={[
         tw`relative text-center bg-white font-sans uppercase px-2 w-full z-10`,
         isHomePage &&
+          tw`absolute top-0 left-0 z-10 w-full bg-transparent text-white`,
+        isFirstBlockPhotoBlock &&
           tw`absolute top-0 left-0 z-10 w-full bg-transparent text-white`,
       ]}
     >

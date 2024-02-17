@@ -13,10 +13,10 @@ export default function BlockImage({ image, hideBlockTitle, title }) {
         </>
       )}
       <GatsbyImage
-        className='aspect-auto max-w-full min-h-[20rem] md:min-h-[40rem] w-full'
+        className='aspect-auto max-w-full min-h-[20rem] md:min-h-[40rem] h-svh w-full object-cover'
         image={image.gatsbyImageData}
         alt={image?.file?.fileName}
-        lazy='lazy'
+        lazy='eager'
       />
     </div>
   );
