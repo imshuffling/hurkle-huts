@@ -93,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
     &:before {
       display: none;
     }
-    ${tw`hidden md:block`}
+    ${tw`!hidden`}
   }
 
   .slick-next {
@@ -108,7 +108,7 @@ const GlobalStyle = createGlobalStyle`
     &:before {
       display: none;
     }
-    ${tw`hidden md:block`}
+    ${tw`!hidden`}
   }
 
 `;
