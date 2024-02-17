@@ -6,8 +6,6 @@ import ContentModules from '../content-modules';
 const Page = ({ data }) => {
   const { pageTitle, blocks, hidePageTitle } = data.contentfulPage;
 
-  console.log(data);
-
   return (
     <Layout>
       {!hidePageTitle && (
