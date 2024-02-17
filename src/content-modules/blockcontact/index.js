@@ -40,7 +40,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
-        className='space-y-8 max-w-lg mx-auto p-4 md:p-6'
+        className='space-y-8 max-w-lg mx-auto py-8'
       >
         <p hidden>
           <label>
@@ -67,7 +67,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               id='email'
               required
               onChange={handleChange}
-              className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+              className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
               placeholder='you@example.com'
             />
           </div>
@@ -89,7 +89,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               required
               onChange={handleChange}
               rows={4}
-              className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+              className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             />
           </div>
         </div>
