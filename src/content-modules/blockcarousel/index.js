@@ -93,7 +93,7 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
     <div
       className='section image w-full p-4 md:p-16'
       css={[
-        bgWhite && tw`text-secondary`,
+        bgWhite && tw`text-secondary bg-white`,
         bgPink && tw`text-primary-blue bg-primary-pink`,
         bgBlack && tw`text-white bg-secondary`,
         bgGreen && tw`text-white bg-primary-green`,
@@ -107,7 +107,7 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
           <div
             className='fixed top-0 left-0 w-full h-full z-50'
             css={[
-              bgWhite && tw`text-secondary`,
+              bgWhite && tw`text-secondary bg-white`,
               bgPink && tw`text-primary-blue bg-primary-pink`,
               bgBlack && tw`text-white bg-secondary`,
               bgGreen && tw`text-white bg-primary-green`,
