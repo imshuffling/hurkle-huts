@@ -116,7 +116,7 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
           >
             <div className='w-full h-full relative z-50'>
               <button
-                className='absolute top-4 left-4 text-2xl text-current md:p-4 z-10'
+                className='absolute top-4 left-4 text-2xl text-current md:p-4 z-10 hover:opacity-75'
                 onClick={handleCloseCarousel}
               >
                 <MdOutlineClose />
@@ -132,10 +132,13 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
                         <GatsbyImage
                           image={item.image.gatsbyImageData}
                           alt={item.image?.file?.fileName}
+                          className='max-h-[70vh] max-w-[90vw] w-full object-contain'
                         />
-                        <h3 className='text-base md:text-xl justify-start font-heading'>
-                          {index + 1}/{carouselItem.length}
-                          <span className='pl-6'>{item.title}</span>
+                        <h3 className='mt-2 md:mt-4 text-base text-current md:text-xl justify-start font-heading leading-6 flex'>
+                          {index + 1} / {carouselItem.length}
+                          <span className='pl-6 inline-block'>
+                            {item.title}
+                          </span>
                         </h3>
                       </div>
                     </div>
