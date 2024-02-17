@@ -117,18 +117,18 @@ export default function Layout({ children}) {
   const { pathname } = useLocation();
   let isFirstBlockPhotoBlock = false;
 
-  // Accessing props from children components
   React.Children.forEach(children, child => {
-    // Check if child is not null
+    // Check if child is not null and has the required props
     if (child && child.props && child.props.blocks && child.props.blocks.length > 0) {
       // Check if the first element in the blocks array is ContentfulPhotoBlock
-      isFirstBlockPhotoBlock =
-        child.props.blocks[0].__typename === 'ContentfulPhotoBlock';
+      isFirstBlockPhotoBlock = child.props.blocks[0].__typename === 'ContentfulPhotoBlock';
 
       // Exit loop after finding the first block
-      return;
+      return false;
     }
   });
+
+
   return (
     <PageContainer>
       <GlobalStyle />
