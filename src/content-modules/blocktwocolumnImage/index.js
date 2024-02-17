@@ -30,7 +30,7 @@ export default function BlockTwoColumnImage({
         {!hideBlockTitle && (
           <h3 className='text-center px-4 md:px-8'>{title}</h3>
         )}
-        <div className='w-full h-full flex flex-col md:flex-row relative z-10 px-4 items-center max-w-[78rem] mx-auto gap-6'>
+        <div className='w-full h-full flex flex-col md:flex-row relative px-4 items-center max-w-[78rem] mx-auto gap-6'>
           <div className='relative w-full min-h-full self-start'>
             <GatsbyImage
               image={leftImage.gatsbyImageData}

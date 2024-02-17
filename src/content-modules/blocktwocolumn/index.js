@@ -34,8 +34,8 @@ export default function BlockTwoColumn({
       <div
         className={
           showTextBeforeImageFirstOnDesktop
-            ? 'w-full h-full flex flex-col md:flex-row-reverse relative z-10 px-4 items-center max-w-[78rem] mx-auto'
-            : 'w-full h-full flex flex-col md:flex-row relative z-10 px-4 items-center max-w-[78rem] mx-auto'
+            ? 'w-full h-full flex flex-col md:flex-row-reverse relative px-4 items-center max-w-[78rem] mx-auto'
+            : 'w-full h-full flex flex-col md:flex-row relative px-4 items-center max-w-[78rem] mx-auto'
         }
       >
         <div className='relative w-full min-h-full self-start'>
