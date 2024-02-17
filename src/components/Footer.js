@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className='text-center font-sans'>
     <div className='p-16 bg-secondary text-white'>
       Contact us
-      <div className='text-primary-bistre'>
+      <div className='text-primary-bistre pt-4'>
         <div>0800 123 4567</div>
         <div>
           <Link className='hover:underline' to='mailto:info@hurkle.co.uk'>
@@ -14,8 +14,8 @@ const Footer = () => (
           </Link>
         </div>
       </div>
-      <div className='text-primary-bistre'>
-        <div className='flex flex-row justify-center pt-4'>
+      <div className='text-primary-bistre pt-4'>
+        <div className='flex flex-row justify-center'>
           <Link
             className='hover:underline'
             to='https://www.instagram.com/hurkle.huts/'
