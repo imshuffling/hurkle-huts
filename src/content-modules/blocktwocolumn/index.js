@@ -19,7 +19,7 @@ export default function BlockTwoColumn({
 
   return (
     <div
-      className='section two-col'
+      className='section two-col relative py-8 md:py-[3.75rem]'
       css={[
         bgWhite && tw`text-secondary`,
         bgPink && tw`text-primary-blue bg-primary-pink`,
@@ -34,21 +34,27 @@ export default function BlockTwoColumn({
       <div
         className={
           showTextBeforeImageFirstOnDesktop
-            ? 'flex flex-col-reverse md:flex-row-reverse items-center'
-            : 'flex flex-col-reverse md:flex-row items-center'
+            ? 'w-full h-full flex flex-col md:flex-row-reverse relative z-10 px-4 items-center max-w-[78rem] mx-auto'
+            : 'w-full h-full flex flex-col md:flex-row relative z-10 px-4 items-center max-w-[78rem] mx-auto'
         }
       >
-        <div className='md:basis-1/2 w-full'>
+        <div className='relative w-full min-h-full self-start'>
           <GatsbyImage
             image={image.gatsbyImageData}
             alt={image.file.fileName}
             lazy='lazy'
-            className='max-w-full min-h-[20rem] md:min-h-[40rem] w-full'
+            className='z-0 w-full'
           />
         </div>
 
-        <div className='md:basis-1/2 text-sm md:text-md p-8 md:p-20'>
-          {renderRichText(text)}
+        <div className='relative w-full h-full mx-auto pt-6 md:pt-0'>
+          <div
+            className={
+              showTextBeforeImageFirstOnDesktop ? 'md:pr-12' : 'md:pl-12'
+            }
+          >
+            {renderRichText(text)}
+          </div>
         </div>
       </div>
     </div>
