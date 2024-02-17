@@ -131,7 +131,6 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
                         <GatsbyImage
                           image={item.image.gatsbyImageData}
                           alt={item.image?.file?.fileName}
-                          className='max-w-[90%] h-auto'
                         />
                         <h3 className='text-base md:text-xl justify-start font-heading'>
                           {index + 1}/{carouselItem.length}
