@@ -43,7 +43,7 @@ export default function BlockTwoColumn({
             image={image.gatsbyImageData}
             alt={image.file.fileName}
             lazy='lazy'
-            className='z-0 w-full'
+            className='z-0 w-full aspect-square'
           />
         </div>
 

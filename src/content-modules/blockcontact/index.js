@@ -40,7 +40,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
-        className='space-y-8 max-w-lg mx-auto py-8'
+        className='space-y-4 md:space-y-6 max-w-lg mx-auto py-8'
       >
         <p hidden>
           <label>

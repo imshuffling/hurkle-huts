@@ -36,7 +36,7 @@ export default function BlockTwoColumnImage({
               image={leftImage.gatsbyImageData}
               alt={leftImage.file.fileName}
               lazy='lazy'
-              className='z-0 w-full'
+              className='z-0 w-full aspect-square'
             />
           </div>
           <div className='relative w-full min-h-full self-start'>
@@ -44,7 +44,7 @@ export default function BlockTwoColumnImage({
               image={rightImage.gatsbyImageData}
               alt={rightImage.file.fileName}
               lazy='lazy'
-              className='z-0 w-full'
+              className='z-0 w-full aspect-square'
             />
           </div>
         </div>
