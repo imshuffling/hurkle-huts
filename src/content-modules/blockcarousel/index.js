@@ -49,7 +49,6 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
   const settings = {
     ref: sliderRef,
     initialSlide: selectedImageIndex || 0,
-    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
@@ -57,10 +56,20 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
     dotsClass: '!flex flex-row gap-4 !items-center py-4 justify-center',
     speed: 300,
     fade: false,
-    swipeToSlide: true,
     prevArrow: '',
     nextArrow: '',
     accessibility: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          swipeToSlide: true,
+          infinite: true,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
