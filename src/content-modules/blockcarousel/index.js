@@ -43,6 +43,8 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
       sliderRef.current.slickNext();
     } else if (event.key === 'ArrowLeft') {
       sliderRef.current.slickPrev();
+    } else if (event.key === 'Escape') {
+      handleCloseCarousel();
     }
   };
 
@@ -71,18 +73,6 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
       },
     ],
   };
-
-  useEffect(() => {
-    if (isCarouselOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
-  }, [isCarouselOpen]);
 
   useEffect(() => {
     if (isCarouselOpen) {
