@@ -7,7 +7,7 @@ import tw from 'twin.macro';
 import CookieConsent from 'react-cookie-consent';
 
 const PageContainer = tw.div`
-flex flex-col min-h-screen
+  flex flex-col min-h-screen
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -115,13 +115,14 @@ const GlobalStyle = createGlobalStyle`
 
 export default function Layout({ children}) {
   const { pathname } = useLocation();
-  let isFirstBlockPhotoBlock = false;
+
+  let isFirstBlockPhotoBlockOrVideoBlock = false;
 
   React.Children.forEach(children, child => {
     // Check if child is not null and has the required props
     if (child && child.props && child.props.blocks && child.props.blocks.length > 0) {
-      // Check if the first element in the blocks array is ContentfulPhotoBlock
-      isFirstBlockPhotoBlock = child.props.blocks[0].__typename === 'ContentfulPhotoBlock';
+      // Check if the first element in the blocks array is ContentfulPhotoBlock or ContentfulVideoBlock
+      isFirstBlockPhotoBlockOrVideoBlock = child.props.blocks[0].__typename === 'ContentfulPhotoBlock' || child.props.blocks[0].__typename === 'ContentfulVideoBlock';
 
       // Exit loop after finding the first block
       return false;
@@ -132,7 +133,7 @@ export default function Layout({ children}) {
   return (
     <PageContainer>
       <GlobalStyle />
-      <Header pathname={pathname} isFirstBlockPhotoBlock={isFirstBlockPhotoBlock} />
+      <Header pathname={pathname} isFirstBlockPhotoBlockOrVideoBlock={isFirstBlockPhotoBlockOrVideoBlock} />
       <main className='flex-1'>{children}</main>
       <Footer />
       <CookieConsent

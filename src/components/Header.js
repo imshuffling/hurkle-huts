@@ -3,7 +3,10 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import LogoIcon from '../images/LogoIcon';
 import tw from 'twin.macro';
 
-export default function Header({ pathname, isFirstBlockPhotoBlock }) {
+export default function Header({
+  pathname,
+  isFirstBlockPhotoBlockOrVideoBlock,
+}) {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       contentfulNavigation(title: { eq: "Main navigation" }) {
@@ -66,9 +69,7 @@ export default function Header({ pathname, isFirstBlockPhotoBlock }) {
     <header
       css={[
         tw`relative text-center bg-white font-sans uppercase px-2 w-full z-10`,
-        isHomePage &&
-          tw`absolute top-0 left-0 z-10 w-full bg-transparent text-white`,
-        isFirstBlockPhotoBlock &&
+        isFirstBlockPhotoBlockOrVideoBlock &&
           tw`absolute top-0 left-0 z-10 w-full bg-transparent text-white`,
       ]}
     >
