@@ -96,6 +96,13 @@ const GlobalStyle = createGlobalStyle`
     ${tw`hidden md:block`}
   }
 
+  .slick-slide img {
+    display: block;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
+
   .slick-next {
     right: 0;
     height: 100%;

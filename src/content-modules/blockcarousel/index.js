@@ -20,9 +20,10 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
   const thumbs = carouselItem.map((item, index) => {
     return (
       <button type='button' key={index} onClick={() => handleImageClick(index)}>
-        <img
+        <GatsbyImage
           className='mx-auto text-center'
-          src={item.image.file.url}
+          // src={item.image.file.url}
+          image={item.image.gatsbyImageData}
           alt={item.image?.file?.fileName}
         />
       </button>
@@ -88,6 +89,8 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
     };
   }, [isCarouselOpen]);
 
+  console.log('carouselItem', carouselItem);
+
   return (
     <div
       className='section image w-full p-4 md:p-16'
@@ -127,19 +130,15 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
                       key={index}
                       className='w-full h-full !flex items-center justify-center flex-col p-4'
                     >
-                      <div>
-                        <GatsbyImage
-                          image={item.image.gatsbyImageData}
-                          alt={item.image?.file?.fileName}
-                          className='max-h-[70vh] max-w-[90vw] w-full object-contain'
-                        />
-                        <h3 className='mt-2 md:mt-4 text-base text-current md:text-xl justify-start font-heading leading-6 flex'>
-                          {index + 1} / {carouselItem.length}
-                          <span className='pl-6 inline-block'>
-                            {item.title}
-                          </span>
-                        </h3>
-                      </div>
+                      <GatsbyImage
+                        image={item.image.gatsbyImageData}
+                        alt={item.image?.file?.fileName}
+                        className='w-auto h-auto aspect-auto max-w-full max-h-full object-contain'
+                      />
+                      <h3 className='mt-2 md:mt-4 text-base text-current md:text-xl justify-start font-heading leading-6 flex'>
+                        {index + 1} / {carouselItem.length}
+                        <span className='pl-6 inline-block'>{item.title}</span>
+                      </h3>
                     </div>
                   ))}
                 </Slider>
