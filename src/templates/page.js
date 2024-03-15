@@ -11,20 +11,24 @@ const Page = ({ data }) => {
   const { pageTitle, blocks, hidePageTitle, id } = data.contentfulPage;
 
   const inspectorProps = useContentfulInspectorMode();
-  const updatedPost = useContentfulLiveUpdates(data.contentfulPage);
+  // const updatedPost = useContentfulLiveUpdates(data.contentfulPage);
+
+  const updatedPost = useContentfulLiveUpdates({
+    ...data.contentfulPage,
+    sys: { id: id },
+  });
 
   return (
     <Layout>
       {!hidePageTitle && (
-        <h1 className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'>
-          {pageTitle}
-
+        <h1
+          className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'
           {...inspectorProps({
             entryId: id,
-            fieldId: 'title',
+            fieldId: 'pageTitle',
           })}
-
-          {updatedPost.title || ''}
+        >
+          {updatedPost.pageTitle || ''}
         </h1>
       )}
       {blocks && <ContentModules blocks={blocks} />}
