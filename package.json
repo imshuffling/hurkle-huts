@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@contentful/live-preview": "^2.17.3",
+    "@contentful/live-preview": "^3.0.0-alpha.24",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "babel-plugin-styled-components": "^2.1.4",
