@@ -1,2 +1,7 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "frame-ancestors 'self' https://app.contentful.com"
