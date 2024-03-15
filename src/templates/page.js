@@ -8,14 +8,16 @@ import {
 } from '@contentful/live-preview/react';
 
 const Page = ({ data }) => {
-  const { pageTitle, blocks, hidePageTitle, id } = data.contentfulPage;
+  const { pageTitle, blocks, hidePageTitle, contentful_id } =
+    data.contentfulPage;
+
+  console.log('data.contentfulPage', data.contentfulPage);
 
   const inspectorProps = useContentfulInspectorMode();
-  // const updatedPost = useContentfulLiveUpdates(data.contentfulPage);
 
   const updatedPost = useContentfulLiveUpdates({
     ...data.contentfulPage,
-    sys: { id: id },
+    sys: { id: contentful_id },
   });
 
   return (
@@ -24,7 +26,7 @@ const Page = ({ data }) => {
         <h1
           className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'
           {...inspectorProps({
-            entryId: id,
+            entryId: contentful_id,
             fieldId: 'pageTitle',
           })}
         >
@@ -58,6 +60,7 @@ export const Head = ({ data }) => {
 export const pageQuery = graphql`
   query pageQuery($slug: String!) {
     contentfulPage(slug: { eq: $slug }) {
+      contentful_id
       pageTitle
       hidePageTitle
       seoTitle
