@@ -26,7 +26,7 @@ const Page = ({ data }) => {
         <h1
           className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'
           {...inspectorProps({
-            entryId: contentful_id,
+            entryId: data.contentfulPage.contentful_id,
             fieldId: 'pageTitle',
           })}
         >
