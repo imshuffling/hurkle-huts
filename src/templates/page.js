@@ -17,7 +17,7 @@ const Page = ({ data }) => {
 
   const updatedPost = useContentfulLiveUpdates({
     ...data.contentfulPage,
-    sys: { id: contentful_id },
+    sys: { id: data.contentfulPage.contentful_id },
   });
 
   return (
@@ -27,7 +27,7 @@ const Page = ({ data }) => {
           className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'
           {...inspectorProps({
             entryId: contentful_id,
-            fieldId: pageTitle,
+            fieldId: 'pageTitle',
           })}
         >
           {updatedPost.pageTitle || ''}
@@ -60,6 +60,14 @@ export const Head = ({ data }) => {
 export const pageQuery = graphql`
   query pageQuery($slug: String!) {
     contentfulPage(slug: { eq: $slug }) {
+      __typename
+      sys {
+        contentType {
+          sys {
+            id
+          }
+        }
+      }
       contentful_id
       pageTitle
       hidePageTitle
