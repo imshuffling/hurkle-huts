@@ -98,7 +98,7 @@ const GlobalStyle = createGlobalStyle`
 
   .slick-slide img {
     display: block;
-    width: auto;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
   }

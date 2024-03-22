@@ -89,8 +89,6 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
     };
   }, [isCarouselOpen]);
 
-  console.log('carouselItem', carouselItem);
-
   return (
     <div
       className='section image w-full p-4 md:p-16'
@@ -137,7 +135,11 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
                       />
                       <h3 className='mt-2 md:mt-4 text-base text-current md:text-xl justify-start font-heading leading-6 flex'>
                         {index + 1} / {carouselItem.length}
-                        <span className='pl-6 inline-block'>{item.title}</span>
+                        {item.title && (
+                          <span className='pl-6 inline-block'>
+                            {item.title}
+                          </span>
+                        )}
                       </h3>
                     </div>
                   ))}
