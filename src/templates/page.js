@@ -2,31 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import ContentModules from '../content-modules';
-// import {
-//   useContentfulInspectorMode,
-//   useContentfulLiveUpdates,
-// } from '@contentful/live-preview/react';
 
 const Page = ({ data }) => {
   const { pageTitle, blocks, hidePageTitle } = data.contentfulPage;
 
-  // const inspectorProps = useContentfulInspectorMode();
-
-  // const updatedPost = useContentfulLiveUpdates({
-  //   ...data.contentfulPage,
-  //   sys: { id: data.contentfulPage.contentful_id },
-  // });
-
   return (
     <Layout>
       {!hidePageTitle && (
-        <h1
-          className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'
-          // {...inspectorProps({
-          //   entryId: data.contentfulPage.contentful_id,
-          //   fieldId: 'pageTitle',
-          // })}
-        >
+        <h1 className='text-2xl leading-8 p-4 md:text-5xl text-center font-heading md:p-12'>
           {pageTitle}
         </h1>
       )}
