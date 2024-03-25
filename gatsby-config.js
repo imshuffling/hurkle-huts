@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Hurkle Huts`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://hurkle.co.uk`,
   },
   plugins: [
     {
@@ -22,6 +22,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-emotion',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
