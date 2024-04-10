@@ -1,5 +1,7 @@
 # Hurkle Huts
 
+![image](https://github.com/imshuffling/hurkle-huts/assets/739061/8d0d0e23-3156-4bda-a04f-5c575d87ad87)
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
