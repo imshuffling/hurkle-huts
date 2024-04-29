@@ -7,12 +7,17 @@ export default function BlockTextArea({
   text,
   hideBlockTitle,
   backgroundColour,
+  textBodyAligment,
 }) {
   const bgWhite = backgroundColour === 'White';
   const bgBlack = backgroundColour === 'Black';
   const bgGreen = backgroundColour === 'Green';
   const bgPink = backgroundColour === 'Pink';
   const bgBlue = backgroundColour === 'Blue';
+
+  const textLeft = textBodyAligment === 'text-left';
+  const textCenter = textBodyAligment === 'text-center';
+  const textRight = textBodyAligment === 'text-right';
 
   return (
     <div
@@ -25,11 +30,20 @@ export default function BlockTextArea({
         bgBlue && tw`text-primary-pink bg-primary-blue`,
       ]}
     >
-      <div className='text-center p-4 md:py-12 container mx-auto'>
+      <div
+        className='text-center p-4 md:py-12 container mx-auto'
+        css={[
+          textLeft && tw`text-left`,
+          textCenter && tw`text-center`,
+          textRight && tw`text-right`,
+        ]}
+      >
         {!hideBlockTitle && (
           <h3 className='text-center px-4 md:px-8'>{title}</h3>
         )}
-        <div className='p-4 md:px-20'>{renderRichText(text)}</div>
+        <div className='p-4 md:px-20 whitespace-pre-wrap'>
+          {renderRichText(text)}
+        </div>
       </div>
     </div>
   );

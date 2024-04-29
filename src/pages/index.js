@@ -133,6 +133,7 @@ export const pageQuery = graphql`
             title
             hideBlockTitle
             backgroundColour
+            textBodyAligment
             text {
               raw
             }
