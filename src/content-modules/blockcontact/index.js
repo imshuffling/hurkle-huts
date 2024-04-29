@@ -141,7 +141,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='typeOfCustomer'
             name='typeOfCustomer'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            defaultValue='Private'
+            // defaultValue='Private'
             onChange={handleChange}
           >
             <option>Private</option>
@@ -162,7 +162,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='whereHearAboutUs'
             name='whereHearAboutUs'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            defaultValue='Instagram'
+            // defaultValue='Instagram'
             onChange={handleChange}
           >
             <option>Instagram</option>
@@ -185,7 +185,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='whatWouldYouLikeToUseTheHutFor'
             name='whatWouldYouLikeToUseTheHutFor'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            defaultValue='Accommodation'
+            // defaultValue='Accommodation'
             onChange={handleChange}
           >
             <option>Accommodation</option>
@@ -206,7 +206,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='leaseOrBuy'
             name='leaseOrBuy'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            defaultValue='Buy'
+            // defaultValue='Buy'
             onChange={handleChange}
           >
             <option>Buy</option>
@@ -225,7 +225,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='howManyHuts'
             name='howManyHuts'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            defaultValue='One'
+            // defaultValue='One'
             onChange={handleChange}
           >
             <option>One</option>
@@ -245,7 +245,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='hutETA'
             name='hutETA'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            defaultValue='0-3 months'
+            // defaultValue='0-3 months'
             onChange={handleChange}
           >
             <option>0-3 months</option>
@@ -298,7 +298,10 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         </div>
 
         <div>
-          Read our <Link to='/privacy-policy'>Privacy Notice</Link>
+          Read our{' '}
+          <Link className='underline' to='/privacy-policy'>
+            Privacy Notice
+          </Link>
         </div>
 
         <div className='mt-1'>
