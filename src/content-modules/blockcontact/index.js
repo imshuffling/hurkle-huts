@@ -15,10 +15,16 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
   }
 
   const handleChange = (e) => {
+    const value =
+      e.target.type === 'checkbox'
+        ? e.target.checked
+          ? 'yes'
+          : 'no'
+        : e.target.value;
+
     setMessage({
       ...message,
-      [e.target.name]:
-        e.target.type === 'checkbox' ? e.target.checked : e.target.value,
+      [e.target.name]: value,
     });
   };
 
@@ -146,8 +152,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='typeOfCustomer'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
+            defaultValue='Select your option'
           >
-            <option class='text-gray-400' value='' disabled selected>
+            <option className='text-gray-400' value='' disabled>
               Select your option
             </option>
             <option>Private</option>
@@ -169,8 +176,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='whereHearAboutUs'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
+            defaultValue='Select your option'
           >
-            <option class='text-gray-400' value='' disabled selected>
+            <option className='text-gray-400' value='' disabled>
               Select your option
             </option>
             <option>Instagram</option>
@@ -194,8 +202,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='whatWouldYouLikeToUseTheHutFor'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
+            defaultValue='Select your option'
           >
-            <option class='text-gray-400' value='' disabled selected>
+            <option className='text-gray-400' value='' disabled>
               Select your option
             </option>
             <option>Accommodation</option>
@@ -217,8 +226,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='leaseOrBuy'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
+            defaultValue='Select your option'
           >
-            <option class='text-gray-400' value='' disabled selected>
+            <option className='text-gray-400' value='' disabled>
               Select your option
             </option>
             <option>Buy</option>
@@ -238,8 +248,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='howManyHuts'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
+            defaultValue='Select your option'
           >
-            <option class='text-gray-400' value='' disabled selected>
+            <option className='text-gray-400' value='' disabled>
               Select your option
             </option>
             <option>One</option>
@@ -260,8 +271,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='hutETA'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
+            defaultValue='Select your option'
           >
-            <option class='text-gray-400' value='' disabled selected>
+            <option className='text-gray-400' value='' disabled>
               Select your option
             </option>
             <option>0-3 months</option>
