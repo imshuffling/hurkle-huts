@@ -15,7 +15,11 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
   }
 
   const handleChange = (e) => {
-    setMessage({ ...message, [e.target.name]: e.target.value });
+    setMessage({
+      ...message,
+      [e.target.name]:
+        e.target.type === 'checkbox' ? e.target.checked : e.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
