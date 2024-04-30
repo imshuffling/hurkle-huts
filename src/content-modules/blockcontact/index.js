@@ -145,7 +145,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='typeOfCustomer'
             name='typeOfCustomer'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            // defaultValue='Private'
             onChange={handleChange}
           >
             <option class='text-gray-400' value='' disabled selected>
@@ -169,7 +168,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='whereHearAboutUs'
             name='whereHearAboutUs'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            // defaultValue='Instagram'
             onChange={handleChange}
           >
             <option class='text-gray-400' value='' disabled selected>
@@ -195,7 +193,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='whatWouldYouLikeToUseTheHutFor'
             name='whatWouldYouLikeToUseTheHutFor'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            // defaultValue='Accommodation'
             onChange={handleChange}
           >
             <option class='text-gray-400' value='' disabled selected>
@@ -219,7 +216,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='leaseOrBuy'
             name='leaseOrBuy'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            // defaultValue='Buy'
             onChange={handleChange}
           >
             <option class='text-gray-400' value='' disabled selected>
@@ -241,7 +237,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='howManyHuts'
             name='howManyHuts'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            // defaultValue='One'
             onChange={handleChange}
           >
             <option class='text-gray-400' value='' disabled selected>
@@ -264,7 +259,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='hutETA'
             name='hutETA'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
-            // defaultValue='0-3 months'
             onChange={handleChange}
           >
             <option class='text-gray-400' value='' disabled selected>
@@ -305,7 +299,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               aria-describedby='signUpMailingList-description'
               name='signUpMailingList'
               type='checkbox'
-              className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600'
+              className='h-4 w-4 rounded border-gray-300 text-primary-green focus:ring-primary-green'
             />
           </div>
           <div className='ml-3 text-sm leading-5'>
@@ -329,7 +323,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         <div className='mt-1'>
           <button
             type='submit'
-            className='text-left rounded-md bg-primary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+            className='text-left rounded-md bg-primary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-green'
           >
             Send
           </button>
