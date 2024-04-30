@@ -37,6 +37,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
       .then(() => navigate('/thanks/'))
       .catch((error) => alert(error));
 
+    console.log('message', message);
+
     e.preventDefault();
   };
 
@@ -64,9 +66,13 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             />
           </label>
         </p>
-        <h2 className='text-base font-semibold leading-7 text-gray-900'>
-          About you
-        </h2>
+        <div class='relative flex py-5 items-center'>
+          <div class='flex-grow border-t border-primary-green'></div>
+          <span class='flex-shrink mx-4 text-base font-semibold leading-7 text-gray-900 font-heading'>
+            About you
+          </span>
+          <div class='flex-grow border-t border-primary-green'></div>
+        </div>
         <div>
           <label
             htmlFor='firstName'
@@ -187,9 +193,13 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             <option>Other</option>
           </select>
         </div>
-        <h2 className='text-base font-semibold leading-7 text-gray-900'>
-          Requirements
-        </h2>
+        <div class='relative flex py-5 items-center'>
+          <div class='flex-grow border-t border-primary-green'></div>
+          <span class='flex-shrink mx-4 text-base font-semibold leading-7 text-gray-900 font-heading'>
+            Requirements
+          </span>
+          <div class='flex-grow border-t border-primary-green'></div>
+        </div>
         <div>
           <label
             htmlFor='whatWouldYouLikeToUseTheHutFor'
@@ -311,6 +321,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               aria-describedby='signUpMailingList-description'
               name='signUpMailingList'
               type='checkbox'
+              onChange={handleChange}
               className='h-4 w-4 rounded border-gray-300 text-primary-green focus:ring-primary-green'
             />
           </div>
@@ -325,19 +336,19 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
           </div>
         </div>
 
-        <div>
+        <div className='text-center'>
           Read our{' '}
           <Link className='underline' to='/privacy-policy'>
             Privacy Notice
           </Link>
         </div>
 
-        <div className='mt-1'>
+        <div className='mt-1 text-center'>
           <button
             type='submit'
             className='text-left rounded-md bg-primary-green px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-green'
           >
-            Send
+            Submit
           </button>
         </div>
       </form>
