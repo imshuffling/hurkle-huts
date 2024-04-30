@@ -148,6 +148,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             // defaultValue='Private'
             onChange={handleChange}
           >
+            <option class='text-gray-400' value='' disabled selected>
+              Select your option
+            </option>
             <option>Private</option>
             <option>Glamping site</option>
             <option>Hotel</option>
@@ -169,6 +172,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             // defaultValue='Instagram'
             onChange={handleChange}
           >
+            <option class='text-gray-400' value='' disabled selected>
+              Select your option
+            </option>
             <option>Instagram</option>
             <option>Google Search</option>
             <option>Word of mouth</option>
@@ -192,6 +198,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             // defaultValue='Accommodation'
             onChange={handleChange}
           >
+            <option class='text-gray-400' value='' disabled selected>
+              Select your option
+            </option>
             <option>Accommodation</option>
             <option>Home Office</option>
             <option>Artist Studio</option>
@@ -213,6 +222,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             // defaultValue='Buy'
             onChange={handleChange}
           >
+            <option class='text-gray-400' value='' disabled selected>
+              Select your option
+            </option>
             <option>Buy</option>
             <option>Lease</option>
           </select>
@@ -232,6 +244,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             // defaultValue='One'
             onChange={handleChange}
           >
+            <option class='text-gray-400' value='' disabled selected>
+              Select your option
+            </option>
             <option>One</option>
             <option>Multiple</option>
             <option>Don't know yet</option>
@@ -252,6 +267,9 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             // defaultValue='0-3 months'
             onChange={handleChange}
           >
+            <option class='text-gray-400' value='' disabled selected>
+              Select your option
+            </option>
             <option>0-3 months</option>
             <option>3-6 months</option>
             <option>6months+</option>
