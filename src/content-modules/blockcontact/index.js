@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { navigate } from 'gatsby-link';
 import { Link } from 'gatsby';
 
 export default function BlockContact({ title, text, hideBlockTitle }) {
-  const [message, setMessage] = useState({});
+  const [message, setMessage] = useState({
+    signUpMailingList: 'No', // Default value for checkbox
+    firstName: '', // Default value for text input
+    lastName: '', // Default value for text input
+    email: '', // Default value for email input
+    phone: '', // Default value for phone input
+    typeOfCustomer: '', // Default value for select input
+    whereHearAboutUs: '', // Default value for select input
+    whatWouldYouLikeToUseTheHutFor: '', // Default value for select input
+    leaseOrBuy: '', // Default value for select input
+    howManyHuts: '', // Default value for select input
+    hutETA: '', // Default value for select input
+    message: '', // Default value for textarea
+  });
 
   function encode(data) {
     return Object.keys(data)
@@ -18,8 +31,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
     const value =
       e.target.type === 'checkbox'
         ? e.target.checked
-          ? 'yes'
-          : 'no'
+          ? 'Yes'
+          : 'No'
         : e.target.value;
 
     setMessage({
@@ -36,8 +49,6 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
     })
       .then(() => navigate('/thanks/'))
       .catch((error) => alert(error));
-
-    console.log('message', message);
 
     e.preventDefault();
   };
@@ -66,12 +77,12 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             />
           </label>
         </p>
-        <div class='relative flex py-5 items-center'>
-          <div class='flex-grow border-t border-primary-green'></div>
-          <span class='flex-shrink mx-4 text-base font-semibold leading-7 text-gray-900 font-heading'>
+        <div className='relative flex py-5 items-center'>
+          <div className='flex-grow border-t border-primary-green'></div>
+          <span className='flex-shrink mx-4 text-base font-semibold leading-7 text-gray-900 font-heading'>
             About you
           </span>
-          <div class='flex-grow border-t border-primary-green'></div>
+          <div className='flex-grow border-t border-primary-green'></div>
         </div>
         <div>
           <label
@@ -86,6 +97,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               name='firstName'
               id='firstName'
               required
+              value={message.firstName}
               onChange={handleChange}
               className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             />
@@ -104,6 +116,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               name='lastName'
               id='lastName'
               required
+              value={message.lastName}
               onChange={handleChange}
               className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             />
@@ -122,6 +135,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               name='email'
               id='email'
               required
+              value={message.email}
               onChange={handleChange}
               className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
               placeholder='you@example.com'
@@ -140,6 +154,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               type='tel'
               name='phone'
               id='phone'
+              value={message.phone}
               onChange={handleChange}
               className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
               placeholder='+44 1234 567890'
@@ -157,8 +172,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='typeOfCustomer'
             name='typeOfCustomer'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+            value={message.typeOfCustomer}
             onChange={handleChange}
-            defaultValue='Select your option'
           >
             <option className='text-gray-400' value='' disabled>
               Select your option
@@ -181,8 +196,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='whereHearAboutUs'
             name='whereHearAboutUs'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+            value={message.whereHearAboutUs}
             onChange={handleChange}
-            defaultValue='Select your option'
           >
             <option className='text-gray-400' value='' disabled>
               Select your option
@@ -193,12 +208,12 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             <option>Other</option>
           </select>
         </div>
-        <div class='relative flex py-5 items-center'>
-          <div class='flex-grow border-t border-primary-green'></div>
-          <span class='flex-shrink mx-4 text-base font-semibold leading-7 text-gray-900 font-heading'>
+        <div className='relative flex py-5 items-center'>
+          <div className='flex-grow border-t border-primary-green'></div>
+          <span className='flex-shrink mx-4 text-base font-semibold leading-7 text-gray-900 font-heading'>
             Requirements
           </span>
-          <div class='flex-grow border-t border-primary-green'></div>
+          <div className='flex-grow border-t border-primary-green'></div>
         </div>
         <div>
           <label
@@ -211,8 +226,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='whatWouldYouLikeToUseTheHutFor'
             name='whatWouldYouLikeToUseTheHutFor'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+            value={message.whatWouldYouLikeToUseTheHutFor}
             onChange={handleChange}
-            defaultValue='Select your option'
           >
             <option className='text-gray-400' value='' disabled>
               Select your option
@@ -236,7 +251,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             name='leaseOrBuy'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
             onChange={handleChange}
-            defaultValue='Select your option'
+            value={message.leaseOrBuy}
           >
             <option className='text-gray-400' value='' disabled>
               Select your option
@@ -257,8 +272,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='howManyHuts'
             name='howManyHuts'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+            value={message.howManyHuts}
             onChange={handleChange}
-            defaultValue='Select your option'
           >
             <option className='text-gray-400' value='' disabled>
               Select your option
@@ -280,8 +295,8 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
             id='hutETA'
             name='hutETA'
             className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
+            value={message.hutETA}
             onChange={handleChange}
-            defaultValue='Select your option'
           >
             <option className='text-gray-400' value='' disabled>
               Select your option
@@ -307,6 +322,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               aria-label='Enter your message'
               placeholder='Message...'
               required
+              value={message.message}
               onChange={handleChange}
               rows={4}
               className='block w-full border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-green sm:text-sm sm:leading-6'
@@ -321,6 +337,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
               aria-describedby='signUpMailingList-description'
               name='signUpMailingList'
               type='checkbox'
+              checked={message.signUpMailingList === 'Yes'}
               onChange={handleChange}
               className='h-4 w-4 rounded border-gray-300 text-primary-green focus:ring-primary-green'
             />
