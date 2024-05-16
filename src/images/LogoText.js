@@ -7,7 +7,7 @@ const LogoText = (props) => (
     version='1.1'
     xmlns='http://www.w3.org/2000/svg'
     {...props}
-    css={[tw`w-auto h-20 md:h-40 fill-current p-5`]}
+    css={[tw`w-auto h-20 md:h-28 fill-current p-5`]}
   >
     <g
       id='Page-1'
