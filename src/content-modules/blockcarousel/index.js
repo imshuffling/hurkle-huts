@@ -16,6 +16,8 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
   const bgGreen = backgroundColour === 'Green';
   const bgPink = backgroundColour === 'Pink';
   const bgBlue = backgroundColour === 'Blue';
+  const hurkleGreen = backgroundColour === 'Hurkle Green';
+  const hurkleBeige = backgroundColour === 'Hurkle Beige';
 
   const thumbs = carouselItem.map((item, index) => {
     return (
@@ -98,6 +100,8 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
         bgBlack && tw`text-white bg-secondary`,
         bgGreen && tw`text-white bg-primary-green`,
         bgBlue && tw`text-primary-pink bg-primary-blue`,
+        hurkleGreen && tw`text-white bg-['#6d9c6c']`,
+        hurkleBeige && tw`text-secondary bg-['#F4E0CF']`,
       ]}
     >
       <div className='grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8'>
@@ -112,6 +116,8 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
               bgBlack && tw`text-white bg-secondary`,
               bgGreen && tw`text-white bg-primary-green`,
               bgBlue && tw`text-primary-pink bg-primary-blue`,
+              hurkleGreen && tw`text-white bg-['#6d9c6c']`,
+              hurkleBeige && tw`text-secondary bg-['#F4E0CF']`,
             ]}
           >
             <div className='w-full h-full relative z-50'>

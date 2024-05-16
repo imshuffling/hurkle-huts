@@ -16,6 +16,8 @@ export default function BlockTwoColumn({
   const bgGreen = backgroundColour === 'Green';
   const bgPink = backgroundColour === 'Pink';
   const bgBlue = backgroundColour === 'Blue';
+  const hurkleGreen = backgroundColour === 'Hurkle Green';
+  const hurkleBeige = backgroundColour === 'Hurkle Beige';
 
   return (
     <div
@@ -26,6 +28,8 @@ export default function BlockTwoColumn({
         bgBlack && tw`text-white bg-secondary`,
         bgGreen && tw`text-white bg-primary-green`,
         bgBlue && tw`text-primary-pink bg-primary-blue`,
+        hurkleGreen && tw`text-white bg-['#6d9c6c']`,
+        hurkleBeige && tw`text-secondary bg-['#F4E0CF']`,
       ]}
     >
       {!hideBlockTitle && (

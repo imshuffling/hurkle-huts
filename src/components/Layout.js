@@ -5,6 +5,7 @@ import { useLocation } from '@reach/router';
 import { createGlobalStyle } from 'styled-components';
 import tw from 'twin.macro';
 import CookieConsent from 'react-cookie-consent';
+import ScrollToTop from "react-scroll-to-top";
 
 const PageContainer = tw.div`
   flex flex-col min-h-screen
@@ -12,7 +13,7 @@ const PageContainer = tw.div`
 
 const GlobalStyle = createGlobalStyle`
   h1 {
-    ${tw`text-3xl leading-9 md:text-5xl font-heading md:leading-12`}
+    ${tw`text-3xl leading-9 md:text-5xl font-heading md:leading-10`}
   }
 
   h2 {
@@ -142,6 +143,7 @@ export default function Layout({ children}) {
       <GlobalStyle />
       <Header pathname={pathname} isFirstBlockPhotoBlockOrVideoBlock={isFirstBlockPhotoBlockOrVideoBlock} />
       <main className='flex-1'>{children}</main>
+      <ScrollToTop smooth style={{'display':'flex', 'alignItems': 'center', 'justifyContent': 'center' }} />
       <Footer />
       <CookieConsent
         disableStyles={true}

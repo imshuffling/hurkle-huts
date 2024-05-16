@@ -44,7 +44,8 @@ module.exports = {
         1: '1.125rem',
       },
       fontFamily: {
-        heading: ['Playfair Display', 'serif'],
+        // heading: ['Playfair Display', 'serif'],
+        heading: ['Poppins', 'serif'],
         sans: ['Poppins', 'sans-serif'],
       },
       colors: {

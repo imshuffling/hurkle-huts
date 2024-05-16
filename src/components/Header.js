@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import LogoIcon from '../images/LogoIcon';
+import LogoIconNoText from '../images/LogoIconNoText';
 import tw from 'twin.macro';
 
 export default function Header({
@@ -36,7 +37,7 @@ export default function Header({
         <React.Fragment key='logo'>
           <li className='mx-auto'>
             <Link to={`/`} activeClassName='active'>
-              <LogoIcon />
+              <LogoIconNoText />
             </Link>
           </li>
           <li className='mx-auto menu-item' key={page.slug}>
@@ -82,7 +83,7 @@ export default function Header({
 
       <nav className='md:hidden flex flex-row justify-between items-center'>
         <Link to={`/`} activeClassName='active'>
-          <LogoIcon />
+          <LogoIconNoText />
         </Link>
         <label
           className='relative z-40 cursor-pointer px-3 py-6'
