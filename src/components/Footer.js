@@ -26,7 +26,7 @@ const Footer = () => (
               </Link>
             </div>
             <div className='flex flex-row justify-center py-2 md:py-4'>
-              <Link className='hover:underline' to='tel:0800 123 4567'>
+              <Link className='hover:underline' to='tel:+447786244245'>
                 <div className='flex flex-row items-center gap-1'>
                   <TbPhone /> Phone
                 </div>
