@@ -9,22 +9,16 @@ const LogoText = (props) => (
     {...props}
     css={[tw`w-auto h-20 md:h-28 fill-current p-5`]}
   >
-    <g
-      id='Page-1'
-      stroke='none'
-      stroke-width='2'
-      fill='none'
-      fill-rule='evenodd'
-    >
+    <g id='Page-1' stroke='none' strokeWidth='2' fill='none' fillRule='evenodd'>
       <g
         id='logo'
         transform='translate(0.370000, 0.820000)'
         fill='#000000'
         css={[tw`stroke-current`]}
-        fill-rule='nonzero'
+        fillRule='nonzero'
       >
         <g id='Group' transform='translate(0.000000, 0.000000)'>
-          <g stroke-width='2' stroke='#000' css={[tw`stroke-current`]}>
+          <g strokeWidth='2' stroke='#000' css={[tw`stroke-current`]}>
             <polygon
               id='Path'
               points='30.57 0.01 30.57 40.84 29.29 40.84 29.29 20.37 1.28 20.37 1.28 40.84 0 40.84 0 0.01 1.28 0.01 1.28 19.32 29.29 19.32 29.29 0.01'
@@ -51,7 +45,7 @@ const LogoText = (props) => (
             ></polygon>
           </g>
           <g
-            stroke-width='2'
+            strokeWidth='2'
             stroke='#000'
             css={[tw`stroke-current`]}
             transform='translate(27.260000, 71.200000)'

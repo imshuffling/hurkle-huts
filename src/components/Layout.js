@@ -89,7 +89,7 @@ const GlobalStyle = createGlobalStyle`
     color: transparent;
     outline: none;
     background: transparent;
-    cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 62.12 39.2'%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath d='M22.12,38.1,2.2,19.6,22.12,1.1m-20,18.5h60' fill='none' stroke='%23000' stroke-miterlimit='10' stroke-width='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 16 16, w-resize;
+    cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 62.12 39.2'%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath d='M22.12,38.1,2.2,19.6,22.12,1.1m-20,18.5h60' fill='none' stroke='%23000' stroke-miterlimit='10' strokeWidth='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 16 16, w-resize;
     z-index: 1;
     &:before {
       display: none;
@@ -111,7 +111,7 @@ const GlobalStyle = createGlobalStyle`
     color: transparent;
     outline: none;
     background: transparent;
-    cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 62.12 39.2'%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath d='M22.12,38.1,2.2,19.6,22.12,1.1m-20,18.5h60' fill='none' stroke='%23000'  transform='rotate(180 31 20)' stroke-miterlimit='10' stroke-width='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 16 16, pointer;
+    cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 62.12 39.2'%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpath d='M22.12,38.1,2.2,19.6,22.12,1.1m-20,18.5h60' fill='none' stroke='%23000'  transform='rotate(180 31 20)' stroke-miterlimit='10' strokeWidth='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 16 16, pointer;
     z-index: 1;
     &:before {
       display: none;

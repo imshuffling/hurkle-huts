@@ -1,7 +1,15 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import tw from 'twin.macro';
 
-export default function BlockImage({ image, hideBlockTitle, title }) {
+export default function BlockImage({
+  image,
+  hideBlockTitle,
+  title,
+  fullHeightImage,
+}) {
+  console.log('fullHeightImage', fullHeightImage);
+
   return (
     <div className='section image w-full relative'>
       {!hideBlockTitle && (
@@ -13,7 +21,8 @@ export default function BlockImage({ image, hideBlockTitle, title }) {
         </>
       )}
       <GatsbyImage
-        className='aspect-auto max-w-full min-h-[20rem] md:min-h-[40rem] h-svh w-full object-cover'
+        className='aspect-auto max-w-full min-h-[5rem] md:min-h-[10rem] h-[80vh] w-full object-cover'
+        css={[fullHeightImage && tw`h-svh`]}
         image={image.gatsbyImageData}
         alt={image?.file?.fileName}
         lazy='eager'

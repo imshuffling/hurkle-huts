@@ -129,6 +129,7 @@ export const pageQuery = graphql`
           __typename
           title
           hideBlockTitle
+          fullHeightImage
           image {
             file {
               fileName

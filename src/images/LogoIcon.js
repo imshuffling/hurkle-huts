@@ -13,7 +13,7 @@ const LogoIcon = (props) => (
     <defs>
       <style>
         {
-          '.cls-1,.cls-2{stroke-width:2px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10}.cls-2{stroke-width:10px}.cls-3{stroke-width:0}.cls-4{isolation:isolate}'
+          '.cls-1,.cls-2{strokeWidth:2px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10}.cls-2{strokeWidth:10px}.cls-3{strokeWidth:0}.cls-4{isolation:isolate}'
         }
       </style>
     </defs>

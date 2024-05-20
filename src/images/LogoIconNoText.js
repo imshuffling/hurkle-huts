@@ -13,10 +13,10 @@ const LogoIconNoText = (props) => (
     <g
       id='Page-1'
       stroke='none'
-      stroke-width='1'
+      strokeWidth='1'
       fill='none'
-      fill-rule='evenodd'
-      stroke-linecap='round'
+      fillRule='evenodd'
+      strokeLinecap='round'
     >
       <g
         id='logo'
@@ -30,7 +30,7 @@ const LogoIconNoText = (props) => (
           x2='0.5'
           y2='305.94792'
           id='Path'
-          stroke-width='10'
+          strokeWidth='10'
         ></line>
         <line
           x1='114'
@@ -38,11 +38,11 @@ const LogoIconNoText = (props) => (
           x2='114'
           y2='371.44792'
           id='Path'
-          stroke-width='10'
+          strokeWidth='10'
         ></line>
         <polygon
           id='Path'
-          stroke-width='10'
+          strokeWidth='10'
           points='0.36 219.09792 114.12 284.77792'
         ></polygon>
         <line
@@ -51,7 +51,7 @@ const LogoIconNoText = (props) => (
           x2='228'
           y2='306.44792'
           id='Path'
-          stroke-width='10'
+          strokeWidth='10'
         ></line>
         <line
           x1='228.14'
@@ -59,17 +59,17 @@ const LogoIconNoText = (props) => (
           x2='114.38'
           y2='285.28792'
           id='Path'
-          stroke-width='10'
+          strokeWidth='10'
         ></line>
         <path
           d='M0,78.4479202 C0,78.4479202 23.5,55.9479202 57,71.4479202 C107.65,94.8779202 114,144.44792 114,144.44792'
           id='Path'
-          stroke-width='2'
+          strokeWidth='2'
         ></path>
         <path
           d='M114,12.4479202 C114,12.4479202 137.5,-10.0520798 171,5.44792022 C221.65,28.8779202 228,78.4479202 228,78.4479202'
           id='Path'
-          stroke-width='2'
+          strokeWidth='2'
         ></path>
       </g>
     </g>
