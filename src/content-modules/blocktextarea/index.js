@@ -35,7 +35,7 @@ export default function BlockTextArea({
       ]}
     >
       <div
-        className='text-center p-4 md:py-8 container mx-auto'
+        className='text-center p-4 md:py-20 container mx-auto'
         css={[
           textLeft && tw`text-left`,
           textCenter && tw`text-center`,
@@ -45,9 +45,7 @@ export default function BlockTextArea({
         {!hideBlockTitle && (
           <h3 className='text-center px-4 md:px-8'>{title}</h3>
         )}
-        <div className='p-4 md:px-20 md:py-0 whitespace-pre-wrap'>
-          {renderRichText(text)}
-        </div>
+        <div className='whitespace-pre-wrap'>{renderRichText(text)}</div>
       </div>
     </div>
   );

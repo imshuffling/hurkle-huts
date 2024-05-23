@@ -54,7 +54,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
   };
 
   return (
-    <div className='section contact p-4'>
+    <div className='section contact p-8 md:p-20'>
       {!hideBlockTitle && <h3 className='text-center p-4'>{title}</h3>}
       <div className='text-center'>{renderRichText(text)}</div>
       <form

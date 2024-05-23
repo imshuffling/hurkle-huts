@@ -9,7 +9,9 @@ const Footer = () => (
     <div className='p-8 md:p-20 bg-secondary text-white'>
       <div className='flex flex-col md:flex-row'>
         <div className='flex-auto flex justify-center items-center'>
-          <Link to='/privacy-policy/'>Privacy policy</Link>
+          <Link className='hover:underline' to='/privacy-policy/'>
+            Privacy policy
+          </Link>
         </div>
         <div className='flex-auto flex justify-center items-center'>
           <div className='p-4 md:p-8'>

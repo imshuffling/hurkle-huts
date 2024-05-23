@@ -38,8 +38,8 @@ export default function BlockTwoColumn({
       <div
         className={
           showTextBeforeImageFirstOnDesktop
-            ? 'w-full h-full flex flex-col md:flex-row-reverse relative px-4 items-center max-w-[78rem] mx-auto'
-            : 'w-full h-full flex flex-col md:flex-row relative px-4 items-center max-w-[78rem] mx-auto'
+            ? 'w-full h-full flex flex-col md:flex-row-reverse relative px-4 items-center container mx-auto'
+            : 'w-full h-full flex flex-col md:flex-row relative px-4 items-center container mx-auto'
         }
       >
         <div className='relative w-full min-h-full self-start'>
@@ -47,7 +47,7 @@ export default function BlockTwoColumn({
             image={image.gatsbyImageData}
             alt={image.file.fileName}
             lazy='lazy'
-            className='z-0 w-full aspect-square'
+            className='z-0 w-full aspect-video'
           />
         </div>
 
