@@ -21,7 +21,7 @@ export default function BlockTwoColumn({
 
   return (
     <div
-      className='section two-col relative py-8 md:py-[3.75rem]'
+      className='section two-col relative py-6 md:py-12'
       css={[
         bgWhite && tw`text-secondary`,
         bgPink && tw`text-primary-blue bg-primary-pink`,
@@ -33,13 +33,13 @@ export default function BlockTwoColumn({
       ]}
     >
       {!hideBlockTitle && (
-        <h3 className='md:text-center px-4 md:px-8 mt-8 mb-8'>{title}</h3>
+        <h3 className='md:text-center px-6 md:px-8 mt-8 mb-8'>{title}</h3>
       )}
       <div
         className={
           showTextBeforeImageFirstOnDesktop
-            ? 'w-full h-full flex flex-col md:flex-row-reverse relative px-4 items-center container mx-auto'
-            : 'w-full h-full flex flex-col md:flex-row relative px-4 items-center container mx-auto'
+            ? 'w-full h-full flex flex-col md:flex-row-reverse relative px-6 items-center md:container mx-auto'
+            : 'w-full h-full flex flex-col md:flex-row relative px-6 items-center md:container mx-auto'
         }
       >
         <div className='relative w-full min-h-full self-start'>

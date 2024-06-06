@@ -19,7 +19,7 @@ export default function BlockTwoColumnImage({
 
   return (
     <div
-      className='section two-col relative py-8 md:py-[3.75rem]'
+      className='section two-col relative py-6 md:py-12'
       css={[
         bgWhite && tw`text-secondary`,
         bgPink && tw`text-primary-blue bg-primary-pink`,
@@ -32,9 +32,9 @@ export default function BlockTwoColumnImage({
     >
       <div className='container mx-auto'>
         {!hideBlockTitle && (
-          <h3 className='text-center px-4 md:px-8'>{title}</h3>
+          <h3 className='text-center px-6 md:px-8'>{title}</h3>
         )}
-        <div className='w-full h-full flex flex-col md:flex-row relative px-4 items-center max-w-[78rem] mx-auto gap-6'>
+        <div className='w-full h-full flex flex-col md:flex-row relative md:px-6 items-center max-w-[78rem] mx-auto gap-6'>
           <div className='relative w-full min-h-full self-start'>
             <GatsbyImage
               image={leftImage.gatsbyImageData}
