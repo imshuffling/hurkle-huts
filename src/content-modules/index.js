@@ -7,6 +7,8 @@ import BlockVideo from './blockvideo';
 import BlockContact from './blockcontact';
 import BlockCarousel from './blockcarousel';
 import BlockTwoColumnImage from './blocktwocolumnImage';
+import BlockThreeColumnImage from './blockthreecolumnImage';
+import BlockTwoColumnText from './blocktwocolumntext';
 
 const MODULE_MAP = {
   ContentfulFullWidthTextBlock: BlockTextArea,
@@ -14,8 +16,10 @@ const MODULE_MAP = {
   ContentfulVideoBlock: BlockVideo,
   ContentfulTwoColumnTextPhotoBlock: BlockTwoColumn,
   ContentfulColumnImageimageBlock: BlockTwoColumnImage,
+  ContentfulThreecolumnImageBlock: BlockThreeColumnImage,
   ContentfulContactBlock: BlockContact,
   ContentfulCarousel: BlockCarousel,
+  ContentfulColumnTexttextBlock: BlockTwoColumnText,
 };
 
 export default function ContentModules({ blocks }) {

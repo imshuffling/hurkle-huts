@@ -105,6 +105,42 @@ export const pageQuery = graphql`
             )
           }
         }
+        ... on ContentfulThreecolumnImageBlock {
+          __typename
+          title
+          hideBlockTitle
+          backgroundColour
+          leftImage {
+            file {
+              fileName
+            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: BLURRED
+            )
+          }
+          centerImage {
+            file {
+              fileName
+            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: BLURRED
+            )
+          }
+          rightImage {
+            file {
+              fileName
+            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: BLURRED
+            )
+          }
+        }
         ... on ContentfulTwoColumnTextPhotoBlock {
           __typename
           title
@@ -123,6 +159,18 @@ export const pageQuery = graphql`
               formats: [AUTO, WEBP, AVIF]
               placeholder: BLURRED
             )
+          }
+        }
+        ... on ContentfulColumnTexttextBlock {
+          __typename
+          title
+          hideBlockTitle
+          backgroundColour
+          leftText {
+            raw
+          }
+          rightText {
+            raw
           }
         }
         ... on ContentfulPhotoBlock {

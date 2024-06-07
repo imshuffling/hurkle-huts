@@ -1,13 +1,15 @@
 import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import tw from 'twin.macro';
 
-export default function BlockTextArea({
+export default function BlockTwoColumnText({
   title,
-  text,
+  image,
+  leftText,
+  rightText,
   hideBlockTitle,
   backgroundColour,
-  textBodyAligment,
 }) {
   const bgWhite = backgroundColour === 'White';
   const bgBlack = backgroundColour === 'Black';
@@ -17,13 +19,9 @@ export default function BlockTextArea({
   const hurkleGreen = backgroundColour === 'Hurkle Green';
   const hurkleBeige = backgroundColour === 'Hurkle Beige';
 
-  const textLeft = textBodyAligment === 'text-left';
-  const textCenter = textBodyAligment === 'text-center';
-  const textRight = textBodyAligment === 'text-right';
-
   return (
     <div
-      className='section text-area'
+      className='section two-col-text relative py-6 md:py-12'
       css={[
         bgWhite && tw`text-secondary`,
         bgPink && tw`text-primary-blue bg-primary-pink`,
@@ -34,18 +32,16 @@ export default function BlockTextArea({
         hurkleBeige && tw`text-secondary bg-['#F4E0CF']`,
       ]}
     >
-      <div
-        className='text-center p-4 md:py-20 md:container mx-auto'
-        css={[
-          textLeft && tw`text-left`,
-          textCenter && tw`text-center`,
-          textRight && tw`text-right`,
-        ]}
-      >
-        {!hideBlockTitle && (
-          <h3 className='text-center px-6 md:px-8'>{title}</h3>
-        )}
-        <div className='whitespace-pre-wrap'>{renderRichText(text)}</div>
+      {!hideBlockTitle && (
+        <h3 className='md:text-center px-6 md:px-8 mt-8 mb-8'>{title}</h3>
+      )}
+      <div className='w-full h-full flex flex-col md:flex-row relative px-6 items-center md:container mx-auto gap-6'>
+        <div className='relative w-full min-h-full self-start'>
+          {renderRichText(leftText)}
+        </div>
+        <div className='relative w-full min-h-full self-start'>
+          {renderRichText(rightText)}
+        </div>
       </div>
     </div>
   );

@@ -2,9 +2,10 @@ import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import tw from 'twin.macro';
 
-export default function BlockTwoColumnImage({
+export default function BlockThreeColumnImage({
   title,
   leftImage,
+  centerImage,
   rightImage,
   hideBlockTitle,
   backgroundColour,
@@ -30,15 +31,21 @@ export default function BlockTwoColumnImage({
         hurkleBeige && tw`text-secondary bg-['#F4E0CF']`,
       ]}
     >
-      <div className='container mx-auto'>
-        {!hideBlockTitle && (
-          <h3 className='text-center px-6 md:px-8'>{title}</h3>
-        )}
-        <div className='w-full h-full flex flex-col md:flex-row relative md:px-6 items-center mx-auto gap-6'>
+      <div className='md:container mx-auto'>
+        {!hideBlockTitle && <h3 className='text-center px-6 pb-6'>{title}</h3>}
+        <div className='w-full h-full flex flex-col md:flex-row relative px-6 items-center mx-auto gap-[1.5rem] md:gap-[3rem]'>
           <div className='relative w-full min-h-full self-start'>
             <GatsbyImage
               image={leftImage.gatsbyImageData}
               alt={leftImage.file.fileName}
+              lazy='lazy'
+              className='z-0 w-full aspect-video'
+            />
+          </div>
+          <div className='relative w-full min-h-full self-start'>
+            <GatsbyImage
+              image={centerImage.gatsbyImageData}
+              alt={centerImage.file.fileName}
               lazy='lazy'
               className='z-0 w-full aspect-video'
             />

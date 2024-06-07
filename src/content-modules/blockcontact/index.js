@@ -64,7 +64,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
         data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
-        className='space-y-4 md:space-y-6 max-w-lg mx-auto py-6'
+        className='space-y-4 md:space-y-6 max-w-[70rem] mx-auto py-6'
       >
         <p hidden>
           <label>
@@ -330,7 +330,7 @@ export default function BlockContact({ title, text, hideBlockTitle }) {
           </div>
         </div>
 
-        <div className='relative flex items-start'>
+        <div className='relative flex items-start justify-center'>
           <div className='flex h-6 items-center'>
             <input
               id='signUpMailingList'
