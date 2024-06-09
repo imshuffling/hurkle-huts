@@ -161,6 +161,26 @@ export const pageQuery = graphql`
             )
           }
         }
+        ... on ContentfulColumnTextimageBlock916ImageRatio {
+          __typename
+          title
+          hideBlockTitle
+          showTextBeforeImageFirstOnDesktop
+          backgroundColour
+          text {
+            raw
+          }
+          image {
+            file {
+              fileName
+            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: BLURRED
+            )
+          }
+        }
         ... on ContentfulColumnTexttextBlock {
           __typename
           title

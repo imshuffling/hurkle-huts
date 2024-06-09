@@ -9,6 +9,7 @@ import BlockCarousel from './blockcarousel';
 import BlockTwoColumnImage from './blocktwocolumnImage';
 import BlockThreeColumnImage from './blockthreecolumnImage';
 import BlockTwoColumnText from './blocktwocolumntext';
+import BlockTwoColumnImage916 from './blocktwocolumnImage916';
 
 const MODULE_MAP = {
   ContentfulFullWidthTextBlock: BlockTextArea,
@@ -16,6 +17,7 @@ const MODULE_MAP = {
   ContentfulVideoBlock: BlockVideo,
   ContentfulTwoColumnTextPhotoBlock: BlockTwoColumn,
   ContentfulColumnImageimageBlock: BlockTwoColumnImage,
+  ContentfulColumnTextimageBlock916ImageRatio: BlockTwoColumnImage916,
   ContentfulThreecolumnImageBlock: BlockThreeColumnImage,
   ContentfulContactBlock: BlockContact,
   ContentfulCarousel: BlockCarousel,
