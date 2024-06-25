@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: 'yVZbmylJwmZQHHFfgknQsS75tEW9AhnJ2q4F9mkx_6E',
-        spaceId: 'pcd8jecof9o4',
+        accessToken: 'RCJ4CxykCZBqwEku-0orvAOD__Mnbsen0MFdpErFfO8',
+        spaceId: 'nz879ncvq7p1',
         useNameForId: false,
       },
     },
