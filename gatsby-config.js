@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -10,8 +12,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: 'RCJ4CxykCZBqwEku-0orvAOD__Mnbsen0MFdpErFfO8',
-        spaceId: 'nz879ncvq7p1',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         useNameForId: false,
       },
     },
@@ -33,16 +35,14 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: '',
-          // Setting this parameter is optional
+          trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
           anonymize: true,
         },
         googleTagManager: {
-          trackingId: '', // leave empty if you want to disable the tracker
-          cookieName: 'gatsby-gdpr-google-tagmanager', // // here can you change the cookie name
-          dataLayerName: 'dataLayer', // default
+          trackingId: process.env.GOOGLE_TAG_MANAGER_TRACKING_ID,
+          cookieName: 'gatsby-gdpr-google-tagmanager',
+          dataLayerName: 'dataLayer',
         },
-        // Defines the environments where the tracking should be available  - default is ["production"]
         environments: ['production', 'development'],
       },
     },
