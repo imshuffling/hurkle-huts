@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import LogoIcon from '../images/LogoIcon';
+// import LogoIcon from '../images/LogoIcon';
 import LogoIconNoText from '../images/LogoIconNoText';
 import tw from 'twin.macro';
 
@@ -25,7 +25,7 @@ export default function Header({
     (page) => page.slug !== 'homepage'
   );
 
-  const isHomePage = pathname === '/';
+  // const isHomePage = pathname === '/';
 
   const middleIndex = Math.ceil(filteredPages.length / 2);
 

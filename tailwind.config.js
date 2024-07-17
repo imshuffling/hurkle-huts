@@ -60,6 +60,8 @@ module.exports = {
           green: '#99AD98',
           pink: '#F8F1F4',
           blue: '#0E2944',
+          hurkleGreen: '#6d9c6c',
+          hurkleBeige: '#F4E0CF',
         },
         secondary: {
           DEFAULT: '#231f20',

@@ -26,8 +26,8 @@ export default function BlockTwoColumnImage({
         bgBlack && tw`text-white bg-secondary`,
         bgGreen && tw`text-white bg-primary-green`,
         bgBlue && tw`text-primary-pink bg-primary-blue`,
-        hurkleGreen && tw`text-white bg-['#6d9c6c']`,
-        hurkleBeige && tw`text-secondary bg-['#F4E0CF']`,
+        hurkleGreen && tw`text-secondary bg-primary-hurkleGreen`,
+        hurkleBeige && tw`text-secondary bg-primary-hurkleBeige`,
       ]}
     >
       <div className='container mx-auto'>

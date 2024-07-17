@@ -6,6 +6,8 @@ import ContentModules from '../content-modules';
 const IndexPage = ({ data }) => {
   const { blocks } = data.contentfulPage;
 
+  console.log('blocks:', blocks);
+
   return <Layout>{blocks && <ContentModules blocks={blocks} />}</Layout>;
 };
 
