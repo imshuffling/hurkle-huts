@@ -28,7 +28,19 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/favicon.png',
+        name: 'Hurkle Huts',
+        short_name: 'Hurkle',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#6d9c6c',
+        display: 'minimal-ui',
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon_options: {
+          // For all the options available, please see:
+          // https://developer.mozilla.org/en-US/docs/Web/Manifest
+          // https://w3c.github.io/manifest/#purpose-member
+          purpose: `maskable`,
+        },
       },
     },
     {
