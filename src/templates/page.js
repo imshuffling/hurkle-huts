@@ -110,6 +110,7 @@ export const pageQuery = graphql`
           title
           hideBlockTitle
           backgroundColour
+          textColour
           leftImage {
             file {
               fileName
@@ -147,6 +148,7 @@ export const pageQuery = graphql`
           hideBlockTitle
           showTextBeforeImageFirstOnDesktop
           backgroundColour
+          textColour
           text {
             raw
           }
@@ -167,6 +169,7 @@ export const pageQuery = graphql`
           hideBlockTitle
           showTextBeforeImageFirstOnDesktop
           backgroundColour
+          textColour
           text {
             raw
           }
@@ -186,6 +189,7 @@ export const pageQuery = graphql`
           title
           hideBlockTitle
           backgroundColour
+          textColour
           leftText {
             raw
           }
@@ -213,6 +217,7 @@ export const pageQuery = graphql`
           __typename
           title
           backgroundColour
+          textColour
           hideBlockTitle
           textBodyAligment
           text {

@@ -8,6 +8,7 @@ export default function BlockTwoColumnImage({
   rightImage,
   hideBlockTitle,
   backgroundColour,
+  textColour,
 }) {
   const bgWhite = backgroundColour === 'White';
   const bgBlack = backgroundColour === 'Black';
@@ -17,17 +18,26 @@ export default function BlockTwoColumnImage({
   const hurkleGreen = backgroundColour === 'Hurkle Green';
   const hurkleBeige = backgroundColour === 'Hurkle Beige';
 
+  const textWhite = textColour === 'White';
+  const textBlack = textColour === 'Black';
+  const textHurkleGreen = textColour === 'Hurkle Green';
+  const textHurkleBeige = textColour === 'Hurkle Beige';
+
   return (
     <div
       className='section two-col relative py-6 md:py-12'
       css={[
-        bgWhite && tw`text-secondary`,
-        bgPink && tw`text-primary-blue bg-primary-pink`,
-        bgBlack && tw`text-white bg-secondary`,
-        bgGreen && tw`text-white bg-primary-green`,
-        bgBlue && tw`text-primary-pink bg-primary-blue`,
-        hurkleGreen && tw`text-secondary bg-primary-hurkleGreen`,
-        hurkleBeige && tw`text-secondary bg-primary-hurkleBeige`,
+        bgWhite && tw`bg-white`,
+        bgPink && tw`bg-primary-pink`,
+        bgBlack && tw`bg-secondary`,
+        bgGreen && tw`bg-primary-green`,
+        bgBlue && tw`bg-primary-blue`,
+        hurkleGreen && tw`bg-primary-hurkleGreen`,
+        hurkleBeige && tw`bg-primary-hurkleBeige`,
+        textWhite && tw`text-white`,
+        textBlack && tw`text-primary`,
+        textHurkleGreen && tw`text-primary-hurkleGreen`,
+        textHurkleBeige && tw`text-primary-hurkleBeige`,
       ]}
     >
       <div className='container mx-auto'>
