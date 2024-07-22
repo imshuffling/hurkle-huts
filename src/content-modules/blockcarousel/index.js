@@ -24,7 +24,6 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
       <button type='button' key={index} onClick={() => handleImageClick(index)}>
         <GatsbyImage
           className='mx-auto text-center'
-          // src={item.image.file.url}
           image={item.image.gatsbyImageData}
           alt={item.image?.file?.fileName}
         />
@@ -91,6 +90,8 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
     };
   }, [isCarouselOpen]);
 
+  console.log('carouselItem:', carouselItem);
+
   return (
     <div
       className='section image w-full p-4 md:p-16'
@@ -129,26 +130,34 @@ export default function BlockCarousel({ carouselItem, backgroundColour }) {
               </button>
               <div className='carousel-container z-50 h-full w-full'>
                 <Slider {...settings} className='h-full w-full'>
-                  {carouselItem.map((item, index) => (
-                    <div
-                      key={index}
-                      className='w-full h-full !flex items-center justify-center flex-col p-4'
-                    >
-                      <GatsbyImage
-                        image={item.image.gatsbyImageData}
-                        alt={item.image?.file?.fileName}
-                        className='w-auto h-auto aspect-auto max-w-full max-h-full object-contain'
-                      />
-                      <h3 className='mt-2 md:mt-4 text-base text-current md:text-xl justify-start font-heading leading-6 flex'>
-                        {index + 1} / {carouselItem.length}
-                        {item.title && (
-                          <span className='pl-6 inline-block'>
-                            {item.title}
-                          </span>
-                        )}
-                      </h3>
-                    </div>
-                  ))}
+                  {carouselItem.map((item, index) => {
+                    // Placeholder for image dimensions (if available)
+                    const width = item.image.gatsbyImageData.width;
+                    const height = item.image.gatsbyImageData.height;
+
+                    const isPortrait = width < height;
+
+                    return (
+                      <div
+                        key={index}
+                        className='w-full h-full !flex items-center justify-center flex-col p-4'
+                      >
+                        <GatsbyImage
+                          image={item.image.gatsbyImageData}
+                          alt={item.image?.file?.fileName}
+                          objectFit='contain'
+                        />
+                        <h3 className='mt-2 md:mt-4 text-base text-current md:text-xl justify-start font-heading leading-6 flex'>
+                          {index + 1} / {carouselItem.length}
+                          {item.title && (
+                            <span className='pl-6 inline-block'>
+                              {item.title}
+                            </span>
+                          )}
+                        </h3>
+                      </div>
+                    );
+                  })}
                 </Slider>
               </div>
             </div>
