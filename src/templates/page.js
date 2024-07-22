@@ -79,32 +79,32 @@ export const pageQuery = graphql`
             }
           }
         }
-        # ... on ContentfulColumnImageimageBlock {
-        #   __typename
-        #   title
-        #   hideBlockTitle
-        #   backgroundColour
-        #   leftImage {
-        #     file {
-        #       fileName
-        #     }
-        #     gatsbyImageData(
-        #       layout: CONSTRAINED
-        #       formats: [AUTO, WEBP, AVIF]
-        #       placeholder: BLURRED
-        #     )
-        #   }
-        #   rightImage {
-        #     file {
-        #       fileName
-        #     }
-        #     gatsbyImageData(
-        #       layout: CONSTRAINED
-        #       formats: [AUTO, WEBP, AVIF]
-        #       placeholder: BLURRED
-        #     )
-        #   }
-        # }
+        ... on ContentfulColumnImageimageBlock {
+          __typename
+          title
+          hideBlockTitle
+          backgroundColour
+          leftImage {
+            file {
+              fileName
+            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: BLURRED
+            )
+          }
+          rightImage {
+            file {
+              fileName
+            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: BLURRED
+            )
+          }
+        }
         ... on ContentfulThreecolumnImageBlock {
           __typename
           title
